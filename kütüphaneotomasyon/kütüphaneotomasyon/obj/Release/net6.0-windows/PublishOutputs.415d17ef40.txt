@@ -1,0 +1,11 @@
+C:\Users\BUGRA\Desktop\kütüphane\kütüphaneotomasyon.exe
+C:\Users\BUGRA\Desktop\kütüphane\kütüphaneotomasyon.dll
+C:\Users\BUGRA\Desktop\kütüphane\kütüphaneotomasyon.deps.json
+C:\Users\BUGRA\Desktop\kütüphane\kütüphaneotomasyon.runtimeconfig.json
+C:\Users\BUGRA\Desktop\kütüphane\kütüphaneotomasyon.pdb
+C:\Users\BUGRA\Desktop\kütüphane\System.Data.SqlClient.dll
+C:\Users\BUGRA\Desktop\kütüphane\runtimes\win-arm64\native\sni.dll
+C:\Users\BUGRA\Desktop\kütüphane\runtimes\win-x64\native\sni.dll
+C:\Users\BUGRA\Desktop\kütüphane\runtimes\win-x86\native\sni.dll
+C:\Users\BUGRA\Desktop\kütüphane\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\BUGRA\Desktop\kütüphane\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
