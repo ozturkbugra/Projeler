@@ -1,0 +1,141 @@
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.exe
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.deps.json
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.runtimeconfig.json
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.dll
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.pdb
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.csproj.AssemblyReference.cache
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.Form1.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.csproj.GenerateResource.cache
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.GeneratedMSBuildEditorConfig.editorconfig
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.AssemblyInfoInputs.cache
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.AssemblyInfo.cs
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.csproj.CoreCompileInputs.cache
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.dll
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\refint\AidatTakip.dll
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.pdb
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.genruntimeconfig.cache
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\ref\AidatTakip.dll
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.giris.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.csproj.CopyComplete
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.aidatodeme.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.donemekle.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.gider.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.kasa.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.makbuzara.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.rprGelir.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.rprGider.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.sakinler.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.sifre.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.tahsilat.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.borcludaireler.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.aidatmakbuz.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.Properties.Resources.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.ekmakbuz.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.gidermakbuz.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.tahsilatmakbuz.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.yardım.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\itextsharp.dll
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\Microsoft.Office.Interop.Excel.dll
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.kasa2.resources
+D:\HER ŞEY\c#\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.güvenlik.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.exe
+D:\HER ŞEY\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.deps.json
+D:\HER ŞEY\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.runtimeconfig.json
+D:\HER ŞEY\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.dll
+D:\HER ŞEY\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.pdb
+D:\HER ŞEY\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+D:\HER ŞEY\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\itextsharp.dll
+D:\HER ŞEY\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\Microsoft.Office.Interop.Excel.dll
+D:\HER ŞEY\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\HER ŞEY\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\HER ŞEY\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\HER ŞEY\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\HER ŞEY\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\HER ŞEY\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.csproj.AssemblyReference.cache
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.aidatmakbuz.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.aidatodeme.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.borcludaireler.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.donemekle.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.ekmakbuz.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.Form1.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.gider.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.gidermakbuz.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.giris.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.güvenlik.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.kasa.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.kasa2.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.makbuzara.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.Properties.Resources.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.rprGelir.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.rprGider.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.sakinler.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.sifre.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.tahsilat.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.tahsilatmakbuz.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.yardım.resources
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.csproj.GenerateResource.cache
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.GeneratedMSBuildEditorConfig.editorconfig
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.AssemblyInfoInputs.cache
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.AssemblyInfo.cs
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.csproj.CoreCompileInputs.cache
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.csproj.CopyComplete
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.dll
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\refint\AidatTakip.dll
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.pdb
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.genruntimeconfig.cache
+D:\HER ŞEY\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\ref\AidatTakip.dll
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.exe
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.deps.json
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.runtimeconfig.json
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.dll
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.pdb
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\Microsoft.Office.Interop.Excel.dll
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.csproj.AssemblyReference.cache
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.aidatmakbuz.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.aidatodeme.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.borcludaireler.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.donemekle.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.ekmakbuz.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.Form1.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.gider.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.gidermakbuz.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.giris.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.güvenlik.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.kasa.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.kasa2.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.makbuzara.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.Properties.Resources.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.rprGelir.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.rprGider.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.sakinler.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.sifre.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.tahsilat.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.tahsilatmakbuz.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.yardım.resources
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.csproj.GenerateResource.cache
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.AssemblyInfoInputs.cache
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.AssemblyInfo.cs
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.csproj.CoreCompileInputs.cache
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.csproj.CopyComplete
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.dll
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\refint\AidatTakip.dll
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.pdb
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\AidatTakip.genruntimeconfig.cache
+C:\Users\BUGRA\Desktop\AidatTakip\AidatTakip\obj\Debug\net6.0-windows\ref\AidatTakip.dll

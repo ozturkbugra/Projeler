@@ -1,0 +1,14 @@
+D:\aidat\AidatTakip.exe
+D:\aidat\AidatTakip.dll
+D:\aidat\AidatTakip.deps.json
+D:\aidat\AidatTakip.runtimeconfig.json
+D:\aidat\AidatTakip.pdb
+D:\aidat\BouncyCastle.Crypto.dll
+D:\aidat\itextsharp.dll
+D:\aidat\Microsoft.Office.Interop.Excel.dll
+D:\aidat\System.Data.SqlClient.dll
+D:\aidat\runtimes\win-arm64\native\sni.dll
+D:\aidat\runtimes\win-x64\native\sni.dll
+D:\aidat\runtimes\win-x86\native\sni.dll
+D:\aidat\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\aidat\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

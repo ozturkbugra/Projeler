@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>D:\HER ŞEY\c#\AidatTakip\AidatTakip\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="aidatmakbuz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="aidatodeme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="borcludaireler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="donemekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ekmakbuz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="gider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="gidermakbuz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="güvenlik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="kasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="kasa2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="makbuzara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="rprGelir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="rprGider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="sakinler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="sifre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="tahsilat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="tahsilatmakbuz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="yardım.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
