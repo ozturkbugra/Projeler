@@ -1,0 +1,464 @@
+﻿@{
+    if (Session["adminid"] == null)
+    {
+        Response.Redirect("/Admin/Login");
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>@ViewBag.Title - BugraSoft Admin</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+
+    <!-- Favicons -->
+    <link href="~/Content/faviconbugra.png" rel="icon">
+    <link href="~/Content/applefaviconbugra.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/Content/admin/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/Content/admin/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/Content/admin/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="~/Content/admin/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="~/Content/admin/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/Content/admin/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/Content/admin/assets/css/style.css" rel="stylesheet">
+
+    <style>
+        .sales-card .card-icon {
+            color: #4154f1;
+            background: #f6f6fe;
+            font-size: 2rem;
+        }
+
+        .info-card h6 {
+            font-size: 28px;
+            color: #012970;
+            font-weight: 700;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <a href="/Admin" class="logo d-flex align-items-center">
+
+                <span class="d-none d-lg-block">BugraSoft</span>
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div><!-- End Logo -->
+
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown" id="markAllAsRead2">
+                        <i class="bi bi-chat-square-text"></i>
+                        @if (@ViewBag.MesajSayi != 0)
+                        {
+                            <span class="badge bg-primary badge-number">@ViewBag.MesajSayi</span>
+                        }
+                    </a><!-- End Notification Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications" style="max-height: 700px; overflow-y: auto;">
+
+                        <li class="dropdown-header">
+                            @ViewBag.MesajSayi adet okunmamış mesajınız vardır
+                            <a href="/Admin/Mesaj"><span class="badge rounded-pill bg-primary p-2 ms-2">Tümünü Gör</span></a>
+                        </li>
+
+
+                        @foreach (var item in ViewBag.Mesaj)
+                        {
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li class="notification-item">
+                                <i class="bi bi-exclamation-circle text-warning"></i>
+                                <div>
+                                    <h4>@item.AdSoyad</h4>
+                                    <p>@item.Konu</p>
+                                    <p>@item.Tarih.ToString("dd/MM/yyyy")</p>
+                                </div>
+                            </li>
+                        }
+                        @foreach (var item2 in ViewBag.MesajBildirim)
+                        {
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li class="notification-item">
+                                <i class="bi bi-check-circle text-success"></i>
+                                <div>
+                                    <h4>@item2.AdSoyad</h4>
+                                    <p>@item2.Konu</p>
+                                    <p>@item2.Tarih.ToString("dd/MM/yyyy")</p>
+                                </div>
+                            </li>
+                        }
+
+
+
+
+                    </ul><!-- End Notification Dropdown Items -->
+
+                </li><!-- End Notification Nav -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown" id="markAllAsRead">
+                        <i class="bi bi-envelope"></i>
+                        @if (@ViewBag.YorumSayi != 0)
+                        {
+                            <span class="badge bg-success badge-number">@ViewBag.YorumSayi</span>
+                        }
+                    </a><!-- End Messages Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages" style="max-height: 700px; overflow-y: auto;">
+
+                        <li class="dropdown-header">
+                            @ViewBag.YorumSayi adet okunmamış blog yorumunuz vardır
+                            <a href="/Blog/BlogYorum?id=0"><span class="badge rounded-pill bg-primary p-2 ms-2">Tümünü Gör</span></a>
+                        </li>
+                        @foreach (var item3 in ViewBag.Yorum)
+                        {
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li class="message-item">
+                                <a href="/Blog/BlogYorum?id=0">
+                                    <img src="~/Content/admin/assets/img/pp.png" alt="" class="rounded-circle">
+                                    <div>
+                                        <h4>@item3.AdSoyad</h4>
+                                        <p>@item3.Yorum</p>
+                                        <p>@item3.Tarih.ToString("dd/MM/yyyy")</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                        }@foreach (var item4 in ViewBag.YorumBildirim)
+                        {
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li class="message-item">
+                                <a href="/Blog/BlogYorum?id=0">
+                                    <img src="~/Content/admin/assets/img/pp.png" alt="" class="rounded-circle">
+                                    <div>
+                                        <h4>@item4.AdSoyad</h4>
+                                        <p>@item4.Yorum</p>
+                                        <p>@item4.Tarih.ToString("dd/MM/yyyy")</p>
+                                    </div>
+                                </a>
+                            </li>
+                        }
+
+
+                    </ul><!-- End Messages Dropdown Items -->
+
+                </li><!-- End Messages Nav -->
+
+                <li class="nav-item dropdown pe-3">
+
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <img src="~/Content/admin/assets/img/pp.png" alt="Profile" class="rounded-circle">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">@Session["AdSoyad"]</span>
+                    </a><!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6>@Session["AdSoyad"]</h6>
+                            <span>Admin</span>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="/Admin/Logout">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Çıkış Yap</span>
+                            </a>
+                        </li>
+
+                    </ul><!-- End Profile Dropdown Items -->
+                </li><!-- End Profile Nav -->
+
+            </ul>
+        </nav><!-- End Icons Navigation -->
+
+    </header><!-- End Header -->
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link collapsed " href="/Admin">
+                    <i class="bi bi-house-door-fill"></i>
+                    <span>Admin Özet</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-bookmark-plus-fill"></i><span>Tanımlamalar</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="/Admin/Tur">
+                            <i class="bi bi-circle"></i><span>Proje Türü</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Kategori">
+                            <i class="bi bi-circle"></i><span>Blog Kategori</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Components Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-journal-text"></i><span>Sayfa İçeriği</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="/Hakkimda">
+                            <i class="bi bi-circle"></i><span>Hakkımda</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Iletisim">
+                            <i class="bi bi-circle"></i><span>İletişim</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Yetenek">
+                            <i class="bi bi-circle"></i><span>Yeteneklerim</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Forms Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#forms-nav33" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-chat-dots-fill"></i><span>Kullanıcıdan Gelenler</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="forms-nav33" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="/Blog/BlogYorum?id=1">
+                            <i class="bi bi-circle"></i><span>Onaylanan Blog Yorumları</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Blog/BlogYorum?id=0">
+                            <i class="bi bi-circle"></i><span>Onaylanmayan Blog Yorumları</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Mesaj">
+                            <i class="bi bi-circle"></i><span>Site Mesajları</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li><!-- End Forms Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/Admin/IP">
+                    <i class="bi bi-people-fill"></i>
+                    <span>Siteyi Ziyaret Edenler</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/Referanslar">
+                    <i class="bi bi-person-video2"></i>
+                    <span>Referanslarım</span>
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/Blog">
+                    <i class="bi bi-pencil-square"></i>
+                    <span>Blog Yazılarım</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/Proje">
+                    <i class="bi bi-motherboard"></i>
+                    <span>Projelerim</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/SiteYorumlar">
+                    <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
+                    <span>Site Yorumlar</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/Yetkili">
+                    <i class="bi bi-person"></i>
+                    <span>Adminler</span>
+                </a>
+            </li><!-- End Profile Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/Home" target="_blank">
+                    <i class="bi bi-browser-edge"></i>
+                    <span>Siteye Geri Dön</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/Admin/Logout">
+                    <i class="bi bi-box-arrow-in-right"></i>
+                    <span>Çıkış Yap</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </aside><!-- End Sidebar-->
+
+    <main id="main" class="main">
+
+        @RenderBody()
+
+    </main>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            &copy; Copyright <strong><span>BugraSoft</span></strong>. Tüm Hakları Saklıdır.
+        </div>
+
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="~/Content/admin/assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="~/Content/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/admin/assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="~/Content/admin/assets/vendor/echarts/echarts.min.js"></script>
+    <script src="~/Content/admin/assets/vendor/quill/quill.min.js"></script>
+    <script src="~/Content/admin/assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="~/Content/admin/assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="~/Content/admin/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/Content/admin/assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var okunduDurumu = false;
+
+            $("#markAllAsRead").on("click", function (e) {
+                e.preventDefault();
+
+                if (!okunduDurumu) {
+                    okunduDurumu = true;
+
+                    // İlk tıklamada sadece işlemleri gerçekleştir, sayfayı yenileme
+                    $.ajax({
+                        type: "POST",
+                        url: "/Admin/MarkAllAsRead",
+                        success: function (result) {
+                            if (result.success) {
+
+
+                            } else {
+                                // Başarısızsa kullanıcıya bir hata mesajı gösterilebilir
+                                alert(result.message || "İşlem tamamlanamadı.");
+                            }
+                        },
+                        error: function () {
+                            // Hata durumunda kullanıcıya bir hata mesajı gösterilebilir
+                            alert("Sunucu hatası.");
+                        },
+                        complete: function () {
+                            // İşlem tamamlandığında okunduDurumu'nu sıfırla
+                            okunduDurumu = false;
+                        }
+                    });
+                } else {
+                    // İkinci tıklamada sayfayı yeniden yükle
+                    location.reload();
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            var okunduDurumu = false;
+
+            $("#markAllAsRead2").on("click", function (e) {
+                e.preventDefault();
+
+                if (!okunduDurumu) {
+                    okunduDurumu = true;
+
+                    // İlk tıklamada sadece işlemleri gerçekleştir, sayfayı yenileme
+                    $.ajax({
+                        type: "POST",
+                        url: "/Admin/MarkAllAsRead2",
+                        success: function (result) {
+                            if (result.success) {
+
+
+                            } else {
+                                // Başarısızsa kullanıcıya bir hata mesajı gösterilebilir
+                                alert(result.message || "İşlem tamamlanamadı.");
+                            }
+                        },
+                        error: function () {
+                            // Hata durumunda kullanıcıya bir hata mesajı gösterilebilir
+                            alert("Sunucu hatası.");
+                        },
+                        complete: function () {
+                            // İşlem tamamlandığında okunduDurumu'nu sıfırla
+                            okunduDurumu = false;
+                        }
+                    });
+                } else {
+                    // İkinci tıklamada sayfayı yeniden yükle
+                    location.reload();
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

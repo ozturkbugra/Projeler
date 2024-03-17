@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "Blog Yazılarım";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main">
+
+
+    <section id="portfolio" class="portfolio sections-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-header">
+                <h2>Bloglarım</h2> <br />
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12"></div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="blog">
+                            <div class="sidebar">
+                                <div class="sidebar-item search-form">
+                                    <h3 class="sidebar-title">Ara</h3>
+                                    <form action="/Home/Bloglarim" method="get" class="mt-3">
+                                        <input type="text" name="q">
+                                        <button type="submit"><i class="bi bi-search"></i></button>
+                                    </form>
+                                </div><!-- End sidebar search formn-->
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12"></div>
+                </div>
+            </div>
+
+
+            <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
+                 data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
+
+                <div>
+                    <ul class="portfolio-flters">
+                        <li data-filter="*" class="filter-active">Tümü</li>
+                        @foreach (var item in ViewBag.BlogTur)
+                        {
+                            <li data-filter=".filter-@item.Ad">@item.Ad</li>
+                        }
+
+
+                    </ul><!-- End Portfolio Filters -->
+                </div>
+
+                <div class="row gy-4 portfolio-container">
+                    @foreach (var item in ViewBag.Blog)
+                    {
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-@item.Ad">
+                            <div class="portfolio-wrap">
+                                <a href="@item.Resim" data-gallery="portfolio-gallery-app" class="glightbox">
+                                    <img src="@item.Resim" class="img-fluid" alt="">
+                                </a>
+                                <div class="portfolio-info">
+
+                                    <h4><a href="/Home/BlogDetay?id=@item.Id" title="More Details">@item.Baslik </a></h4>
+                                    <br />
+                                    <i class="bi bi-eye-fill"></i> @item.Click
+
+
+
+                                    <p><i class="bi bi-tag"></i> @item.Ad </p>
+
+                                    <p><i class="bi bi-calendar3"></i>  @item.Tarih.ToString("dd/MM/yyyy")</p>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+                    }
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- Projeler Bitiş -->
+</main>
+

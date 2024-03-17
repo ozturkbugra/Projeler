@@ -1,0 +1,79 @@
+﻿
+@model BugraSite.Models.Hakkimda
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container p-5">
+    <table class="table table-hover datatable">
+        <thead>
+            <tr>
+              
+                <th>Hakkımda Yazısı</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                
+                <td>@Model.Yazi</td>
+
+                <td>
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable3" onclick="editKategori('@Model.Id')">Düzenle</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+
+<div class="modal fade" id="modalDialogScrollable3" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Hakkımda Yazısı Güncelleme</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="updateKategoriForm" method="post" action="/Hakkimda/UpdateHakkimda">
+                    @Html.AntiForgeryToken()
+
+                    <input type="hidden" id="Id" name="Id" />
+
+                    <div class="form-group">
+                        <label for="KullaniciAdi">Tür Adı</label>
+                        <input type="text" class="form-control" id="Yazi" name="Yazi" required />
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Çıkış</button>
+                        <button type="submit" class="btn btn-warning">Güncelle</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div><!-- End Modal Dialog Scrollable-->
+
+<script>
+     function editKategori(id) {
+        $.ajax({
+            url: '/Hakkimda/GetHakkimizdaById',
+            type: 'GET',
+            data: { id: id },
+            success: function (result) {
+                if (result) {
+                    $('#updateKategoriForm #Id').val(result.Id);
+                    $('#updateKategoriForm #Yazi').val(result.Yazi);
+                    $('#updateKategoriModal').modal('show');
+                }
+            }
+        });
+    }
+
+</script>

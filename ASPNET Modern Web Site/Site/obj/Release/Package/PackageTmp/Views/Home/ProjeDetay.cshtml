@@ -1,0 +1,95 @@
+﻿@model BugraSite.Models.ProjelerView 
+@{
+    ViewBag.Title = Model.Ad;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main">
+
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container" data-aos="fade-up">
+           
+            <h5><a href="/Home">Ana Sayfa </a> / <a href="/Home/Projelerim"> Projelerim </a> / @Model.Ad</h5>
+                <div class="position-relative h-100">
+                    <div class="slides-1 portfolio-details-slider swiper">
+                        <div class="swiper-wrapper align-items-center">
+
+                            <div class="swiper-slide">
+                                <img src="@Model.Resim1" alt="" class="img-fluid">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="@Model.Resim2" alt="" class="img-fluid">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="@Model.Resim3" alt="" class="img-fluid">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="@Model.Resim4" alt="" class="img-fluid">
+                            </div>
+
+                            @if (Model.Resim5 != null)
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@Model.Resim5" alt="" class="img-fluid">
+                                </div>
+                            }
+
+                            @if (Model.Resim6 != null)
+                            {
+                                <div class="swiper-slide">
+                                    <img src="@Model.Resim6" alt="" class="img-fluid">
+                                </div>
+                            }
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+  
+            
+
+            <div class="row justify-content-between gy-4 mt-4">
+
+                <div class="col-lg-8">
+                    <div class="portfolio-description">
+                        <h2>@Model.Ad</h2>
+                        <p>
+                            @Html.Raw(Model.Aciklama)
+                        </p>
+                        
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="portfolio-info">
+                        <h3>Proje Bilgileri</h3>
+                        <ul>
+                            <li><strong>Kategori</strong> <span>@Model.TurAdi</span></li>
+                            @if (Model.ProjeURL != null)
+                            {
+                                <li><strong>Projenin URL'si</strong> <a href="@Model.ProjeURL">@Model.ProjeURL</a></li>
+                            }
+                            @if (Model.VideoURL != null)
+                            {
+                                <li><strong>Kullanım Videosu </strong> <a href="@Model.VideoURL">@Model.VideoURL</a></li>
+                            }
+
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Details Section -->
+
+</main>
+

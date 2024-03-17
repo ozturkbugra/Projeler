@@ -1,0 +1,327 @@
+﻿
+@{
+    ViewBag.Title = "Ana Sayfa";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Admin Özet</h2>
+
+
+<div class="row">
+    <div class="col-6">
+        <canvas id="myChart" width="600" height="300"></canvas>
+
+        <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var ctx = document.getElementById("myChart").getContext("2d");
+
+      
+        var messageCount = @Html.Raw(Json.Encode(ViewBag.MesajSayi2));
+        var approvedBlogCommentsCount = @Html.Raw(Json.Encode(ViewBag.BlogYorum));
+        var siteMessagesCount = @Html.Raw(Json.Encode(ViewBag.SiteMesajSayi));
+        var skillsCount = @Html.Raw(Json.Encode(ViewBag.YetenekSayi));
+        var projectsCount = @Html.Raw(Json.Encode(ViewBag.ProjeSayi));
+        var referencesCount = @Html.Raw(Json.Encode(ViewBag.ReferansSayi));
+        var blogPostsCount = @Html.Raw(Json.Encode(ViewBag.BlogSayi));
+
+        var chart = new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: ["Mesajlar", "Onaylanmış Blog Yorumları", "Siteye Gelen Yorumlar", "Yeteneklerim", "Projelerim", "Referanslarım", "Blog Yazıları"],
+                datasets: [{
+                    label: "Toplam Sayılar",
+                    data: [messageCount, approvedBlogCommentsCount, siteMessagesCount, skillsCount, projectsCount, referencesCount, blogPostsCount],
+                    backgroundColor: [
+                       
+                        "rgba(75, 192, 192, 0.2)",
+                        "rgba(153, 102, 255, 0.2)",
+                        "rgba(255, 159, 64, 0.2)",
+                        "rgba(255, 99, 132, 0.2)",
+                        "rgba(54, 162, 235, 0.2)",
+                        "rgba(255, 206, 86, 0.2)",
+                        "rgba(75, 192, 192, 0.2)"
+                    ],
+                    borderColor: [
+                       
+                        "rgba(75, 192, 192, 1)",
+                        "rgba(153, 102, 255, 1)",
+                        "rgba(255, 159, 64, 1)",
+                        "rgba(255, 99, 132, 1)",
+                        "rgba(54, 162, 235, 1)",
+                        "rgba(255, 206, 86, 1)",
+                        "rgba(75, 192, 192, 1)"
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
+        </script>
+    </div>
+    <div class="col-6">
+        <canvas id="myChart2" width="600" height="300"></canvas>
+        
+        <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var ctx = document.getElementById("myChart2").getContext("2d");
+
+        var dailyCount = @Html.Raw(Json.Encode(ViewBag.GunSayi));
+        var monthlyCount = @Html.Raw(Json.Encode(ViewBag.AySayi));
+        var yearlyCount = @Html.Raw(Json.Encode(ViewBag.YilSayi));
+       
+
+        var chart = new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: ["Günlük", "Aylık", "Yıllık"],
+                datasets: [{
+                    label: "Toplam Sayılar",
+                    data: [dailyCount, monthlyCount, yearlyCount],
+                    backgroundColor: [
+                        "rgba(255, 99, 132, 0.2)",
+                        "rgba(54, 162, 235, 0.2)",
+                        "rgba(255, 206, 86, 0.2)"
+                   
+                    ],
+                    borderColor: [
+                        "rgba(255, 99, 132, 1)",
+                        "rgba(54, 162, 235, 1)",
+                        "rgba(255, 206, 86, 1)"
+                       
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
+        </script>
+    </div>
+</div>
+
+<div class="row">
+
+   
+
+   
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card info-card sales-card">
+
+            <div class="card-body">
+                <h5 class="card-title"><a href="/Admin/IP?timeInterval=1">Günlük Ziyaretçi Sayısı</a></h5>
+
+                <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="bi bi-person-fill"></i><i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <div class="ps-3">
+                        <h6>@ViewBag.GunSayi</h6>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card info-card sales-card">
+
+            <div class="card-body">
+                <h5 class="card-title"><a href="/Admin/IP?timeInterval=1">Aylık Ziyaretçi Sayısı</a></h5>
+
+                <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="bi bi-person-fill"></i><i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <div class="ps-3">
+                        <h6>@ViewBag.AySayi</h6>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card info-card sales-card">
+
+            <div class="card-body">
+                <h5 class="card-title"><a href="/Admin/IP?timeInterval=1">Yıllık Ziyaretçi Sayısı</a></h5>
+
+                <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="bi bi-person-fill"></i><i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <div class="ps-3">
+                        <h6>@ViewBag.YilSayi</h6>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card info-card sales-card">
+
+            <div class="card-body">
+                <h5 class="card-title"><a href="/Admin/Mesaj">Siteye Gelen Mesaj Sayısı</a></h5>
+
+                <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="bi bi-chat-dots-fill"></i>
+                    </div>
+                    <div class="ps-3">
+                        <h6>@ViewBag.MesajSayi2</h6>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card info-card sales-card">
+
+            <div class="card-body">
+                <h5 class="card-title"><a href="/Blog/BlogYorum?id=1">Onaylanan Blog Yorumları</a></h5>
+
+                <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="bi bi-chat-quote"></i>
+                    </div>
+                    <div class="ps-3">
+                        <h6>@ViewBag.BlogYorum</h6>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card info-card sales-card">
+
+            <div class="card-body">
+                <h5 class="card-title"><a href="/SiteYorumlar">Sitemizi tavsiye eden sayısı</a></h5>
+
+                <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                    <div class="ps-3">
+                        <h6>@ViewBag.SiteMesajSayi</h6>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card info-card sales-card">
+
+            <div class="card-body">
+                <h5 class="card-title"><a href="/Yetenek">Toplam Yeteneklerim</a></h5>
+
+                <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="bi bi-plus-circle"></i>
+                    </div>
+                    <div class="ps-3">
+                        <h6>@ViewBag.YetenekSayi</h6>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card info-card sales-card">
+
+            <div class="card-body">
+                <h5 class="card-title"><a href="/Referanslar">Toplam Referanslarım</a></h5>
+
+                <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="bi bi-person-video2"></i>
+                    </div>
+                    <div class="ps-3">
+                        <h6>@ViewBag.ReferansSayi</h6>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card info-card sales-card">
+
+            <div class="card-body">
+                <h5 class="card-title"><a href="/Proje">Toplam Projelerim</a></h5>
+
+                <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="bi bi-motherboard"></i>
+                    </div>
+                    <div class="ps-3">
+                        <h6>@ViewBag.ProjeSayi</h6>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card info-card sales-card">
+
+            <div class="card-body">
+                <h5 class="card-title"><a href="/Blog">Toplam Blog Yazılarım</a></h5>
+
+                <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="bi bi-pencil-square"></i>
+                    </div>
+                    <div class="ps-3">
+                        <h6>@ViewBag.BlogSayi</h6>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+

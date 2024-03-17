@@ -1,0 +1,199 @@
+﻿
+@model List<BugraSite.Models.Kategoriler>
+@{
+    ViewBag.Title = "Blog Kategori";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-6"><h2>Blog Kategorileri</h2></div>
+    <div class="col-6">
+        <button type="button" class="btn btn-outline-success" style="float:right;" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable4">
+            Kategori Ekle
+        </button>
+    </div>
+</div>
+
+
+<div class="container p-5">
+    <table class="table table-hover datatable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Kategori Adı</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Ad</td>
+
+                    <td>
+                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable3" onclick="editKategori('@item.Id')">Düzenle</button>
+                        <button class="btn btn-danger" onclick="deleteKategori('@item.Id')">Sil</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+
+<div class="modal fade" id="modalDialogScrollable4" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Kategori Ekleme</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="AddKategoriForm" method="post" action="@Url.Action("AddKategori")">
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-group">
+                        <label for="KullaniciAdi">Tür Adı</label>
+                        <input type="text" class="form-control" id="Ad" name="Ad" required />
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Çıkış</button>
+                        <button type="submit" class="btn btn-success">Kaydet</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div><!-- End Modal Dialog Scrollable-->
+
+<div class="modal fade" id="modalDialogScrollable3" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Kategori Güncelleme</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="updateKategoriForm" method="post" action="/Kategori/UpdateKategori">
+                    @Html.AntiForgeryToken()
+
+                    <input type="hidden" id="Id" name="Id" />
+
+                    <div class="form-group">
+                        <label for="KullaniciAdi">Tür Adı</label>
+                        <input type="text" class="form-control" id="Ad" name="Ad" required />
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Çıkış</button>
+                        <button type="submit" class="btn btn-warning">Güncelle</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div><!-- End Modal Dialog Scrollable-->
+<!-- Update Kullanici Modal -->
+<!-- Başarılı durum için modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">Başarılı İşlem</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="refreshPage()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Proje Türü Silindi</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="refreshPage()">Tamam</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Başarısız durum için modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-danger" id="errorModalLabel">Hata</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-danger">Bu Kategori ile blog yazdınız.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function refreshPage() {
+        location.reload();
+    }
+
+     $(document).ready(function () {
+        $('#addKategoriForm').submit(function (e) {
+            e.preventDefault();
+            var formData = new FormData($(this)[0]);
+
+            $.ajax({
+                url: '@Url.Action("AddKategori")',
+                type: 'POST',
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function () {
+                    location.reload();
+                }
+            });
+        });
+     });
+
+    function editKategori(id) {
+        $.ajax({
+            url: '/Kategori/GetKategoriById',
+            type: 'GET',
+            data: { id: id },
+            success: function (result) {
+                if (result) {
+                    $('#updateKategoriForm #Id').val(result.Id);
+                    $('#updateKategoriForm #Ad').val(result.Ad);
+                    $('#updateKategoriModal').modal('show');
+                }
+            }
+        });
+    }
+
+
+    function deleteKategori(id) {
+        var confirmDelete = confirm("Silmek istediğinize emin misiniz?");
+        if (confirmDelete) {
+            $.ajax({
+                url: '@Url.Action("DeleteKategori")',
+                type: 'POST',
+                data: { id: id },
+                success: function (data) {
+                    if (data.success) {
+
+                        $('#successModal').modal('show');
+                    } else {
+                        $('#errorModal').modal('show');
+                    }
+                }
+            });
+        }
+    }
+
+</script>
+

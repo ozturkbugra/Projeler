@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bugrasiteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Sifre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Bloglar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Kategori" Type="Byte" />
+    <Property Name="Click" Type="Int32" />
+  </EntityType>
+  <EntityType Name="BlogYorumlar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BlogId" Type="Int32" Nullable="false" />
+    <Property Name="AdSoyad" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Yorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Durum" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="Tarih" Type="DateTime" Precision="3" />
+    <Property Name="OkunduMu" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="YanitVerildiMi" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Hakkimda">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Yazi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Iletisim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Tel" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Mail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Linkedin" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Instagram" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Kategoriler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mesajlar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdSoyad" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Tel" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Konu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mesaj" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OkunduMu" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Projeler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProjeURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Tur" Type="Int32" Nullable="false" />
+    <Property Name="Resim1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Resim2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Resim3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Resim4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Resim5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Resim6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="VideoURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="YayindaMi" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Referanslar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tur">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TurAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VisitorLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IPAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="VisitDate" Type="DateTime" Precision="0" />
+    <Property Name="Day" Type="Int32" />
+    <Property Name="Month" Type="Int32" />
+    <Property Name="Year" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Yetenekler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Yuzdesi" Type="Byte" />
+    <Property Name="Renk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Yorumlar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Unvan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BloglarView">
+    <Key>
+      <PropertyRef Name="Ad" />
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Baslik" />
+      <PropertyRef Name="Aciklama" />
+      <PropertyRef Name="Resim" />
+      <PropertyRef Name="Tarih" />
+    </Key>
+    <Property Name="Ad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Click" Type="Int32" />
+  </EntityType>
+  <EntityType Name="BlogYorumlarView">
+    <Key>
+      <PropertyRef Name="AdSoyad" />
+      <PropertyRef Name="Yorum" />
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Baslik" />
+      <PropertyRef Name="Expr1" />
+    </Key>
+    <Property Name="AdSoyad" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Yorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Durum" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Tarih" Type="DateTime" Precision="3" />
+    <Property Name="Baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Expr1" Type="Int32" Nullable="false" />
+    <Property Name="YanitVerildiMi" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BlogYorumYanitView">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="BloglarId" />
+      <PropertyRef Name="BlogYorumlarId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="BlogId" Type="Int32" />
+    <Property Name="BlogYorumId" Type="Int32" />
+    <Property Name="Yorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BloglarId" Type="Int32" Nullable="false" />
+    <Property Name="BlogYorumlarId" Type="Int32" Nullable="false" />
+    <Property Name="Tarih" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ProjelerView">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Ad" />
+      <PropertyRef Name="Aciklama" />
+      <PropertyRef Name="Resim1" />
+      <PropertyRef Name="Resim2" />
+      <PropertyRef Name="Resim3" />
+      <PropertyRef Name="Resim4" />
+      <PropertyRef Name="TurAdi" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProjeURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Resim1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Resim2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Resim3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Resim4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Resim5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="VideoURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TurAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Resim6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="YayindaMi" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="bugrasiteEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admins" EntityType="Self.Admin" />
+    <EntitySet Name="Bloglars" EntityType="Self.Bloglar" />
+    <EntitySet Name="BlogYorumlars" EntityType="Self.BlogYorumlar" />
+    <EntitySet Name="Hakkimdas" EntityType="Self.Hakkimda" />
+    <EntitySet Name="Iletisims" EntityType="Self.Iletisim" />
+    <EntitySet Name="Kategorilers" EntityType="Self.Kategoriler" />
+    <EntitySet Name="Mesajlars" EntityType="Self.Mesajlar" />
+    <EntitySet Name="Projelers" EntityType="Self.Projeler" />
+    <EntitySet Name="Referanslars" EntityType="Self.Referanslar" />
+    <EntitySet Name="Turs" EntityType="Self.Tur" />
+    <EntitySet Name="VisitorLogs" EntityType="Self.VisitorLog" />
+    <EntitySet Name="Yeteneklers" EntityType="Self.Yetenekler" />
+    <EntitySet Name="Yorumlars" EntityType="Self.Yorumlar" />
+    <EntitySet Name="BloglarViews" EntityType="Self.BloglarView" />
+    <EntitySet Name="BlogYorumlarViews" EntityType="Self.BlogYorumlarView" />
+    <EntitySet Name="BlogYorumYanitViews" EntityType="Self.BlogYorumYanitView" />
+    <EntitySet Name="ProjelerViews" EntityType="Self.ProjelerView" />
+    <EntitySet Name="BlogYorumYenis" EntityType="bugrasiteModel.BlogYorumYeni" />
+    <EntitySet Name="BlogYorumYanits" EntityType="bugrasiteModel.BlogYorumYanit" />
+  </EntityContainer>
+  <EntityType Name="BlogYorumYeni">
+    <Key>
+      <PropertyRef Name="BlogID" />
+      <PropertyRef Name="BlogBaslik" />
+      <PropertyRef Name="YorumAdSoyad" />
+      <PropertyRef Name="YorumIcerik" />
+      <PropertyRef Name="YorumID" />
+      <PropertyRef Name="YanitID" />
+    </Key>
+    <Property Name="BlogID" Type="Int32" Nullable="false" />
+    <Property Name="BlogBaslik" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="YorumAdSoyad" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="YorumMail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="YorumIcerik" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="YorumDurum" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="YorumTarih" Type="DateTime" Precision="3" />
+    <Property Name="YorumOkunduMu" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="YorumID" Type="Int32" Nullable="false" />
+    <Property Name="YanitID" Type="Int32" Nullable="false" />
+    <Property Name="YanitIcerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="YanitTarih" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BlogYorumYanit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BlogYorumId" Type="Int32" />
+    <Property Name="Yorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Tarih" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

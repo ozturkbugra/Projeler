@@ -1,0 +1,496 @@
+﻿@{
+    ViewBag.Title = "Ana Sayfa";
+}
+
+<button id="hiddenButton" data-bs-toggle="modal" data-bs-target="#asdfgh" style="display: none;"></button>
+
+<!-- Hoş gelndiniz mesajı -->
+<div class="modal fade" id="asdfgh" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-dark" id="successModalLabel">Merhaba, sitemize hoş geldin</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-dark">
+                <h4>Size Yardımcı Olabileceğimiz Konular:</h4>
+                <p class="text-dark">
+                    <ol>
+                        <li> Firmanıza ait her türlü web sitesi  </li>
+                        <li> Kullanıcıyla etkileşime geçebilecek randevulu web siteleri </li>
+                        <li> Uygun fiyatlara basit öğrenci projesi (Masaüstü, Web, Mobil (Basit)) </li>
+                        <li> Basit Muhasebe programı </li>
+                        <li> Apartman Aidat Programı </li>
+                        <li> Yapılacaklar Listesi Programı </li>
+                        <li> İsteğe özel masaüstü uygulaması </li>
+                    </ol>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tamam</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // ViewBag.a değerini doğrudan JavaScript ifadesine dönüştür
+        var isViewBagATruthy = @Html.Raw(Json.Encode(ViewBag.a));
+
+        // Gizli butonu bul
+        var hiddenButton = document.getElementById('hiddenButton');
+
+        // hiddenButton var mı ve ViewBag.a true mu kontrol et
+        if (hiddenButton && isViewBagATruthy) {
+            // Gizli butona programlı bir şekilde tıkla
+            hiddenButton.click();
+        }
+    });
+
+    document.getElementById('hiddenButton').addEventListener('click', function () {
+        // Modalı açmak için gerekli kod
+        $('#asdfgh').modal('show');
+    });
+</script>
+
+
+<section id="hero" class="hero">
+    <div class="container position-relative">
+        <div class="row gy-5" data-aos="fade-in">
+            @if (ViewBag.YorumTalebiAlindi2 != null && ViewBag.YorumTalebiAlindi2)
+            {
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    Mesajınız bize iletildi en kısa sürede dönüş yapacağız.
+
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            @if (ViewBag.YorumTalebiAlindi3 != null && ViewBag.YorumTalebiAlindi3)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    Mesaj gönderirken bir hata oluştu lütfen alanları düzgün doldurunuz.
+
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+            <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+                <h2>
+                    Hızlı, pratik, kullanımı kolay yazılım
+                </h2>
+                <p>
+                    Masaüstü ve Web tabanlı ASP.NET MVC mimarisiyle yazılım geliştiriyorum. <strong class="text-white">Öğrencilerin proje ödevi için PHP dilini de kullanarak proje geliştiriyorum</strong>
+                </p>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                    <a href="#contact" class="btn-get-started">İletişime Geç</a>
+                </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2">
+                <img src="~/Content/site/assets/img/Adsız.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+            </div>
+        </div>
+    </div>
+
+    <div class="icon-boxes position-relative">
+        <div class="container position-relative">
+            <div class="row gy-4 mt-5">
+
+                <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-pencil-square"></i></div>
+                        <h4 class="title"><a href="" class="stretched-link">Basit ve Kullanıcı Dostu Tasarım</a></h4>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-bezier"></i></div>
+                        <h4 class="title"><a href="" class="stretched-link">İsteğe Özel Algoritmalı Programlar</a></h4>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-cash-coin"></i></div>
+                        <h4 class="title"><a href="" class="stretched-link">Uygun Fiyat</a></h4>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-headset"></i></div>
+                        <h4 class="title"><a href="" class="stretched-link">Haftanın Her Günü Destek</a></h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+<main id="main">
+
+    @if (ViewBag.ToplamReferans > 5)
+    {
+        <!-- ======= Referanslar ======= -->
+        <section id="clients" class="clients">
+            <div class="container" data-aos="zoom-out">
+                <h2 class="text-center">Referanslarım</h2>
+                <div class="clients-slider swiper mt-3">
+                    <div class="swiper-wrapper align-items-center">
+                        @foreach (var item in ViewBag.Referans)
+                        {
+                            <div class="swiper-slide"><img src="@item.Resim" class="img-fluid" alt=""></div>
+                        }
+
+
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- Referanslar Bitiş -->
+    }
+
+    <!-- ======= Sayaç Section ======= -->
+    <section id="stats-counter" class="stats-counter">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row gy-4 align-items-center text-center">
+
+                <div class="col-lg-6">
+                    <img src="~/Content/site/assets/img/kod.png" alt="" class="w-75 h-75">
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="stats-item  align-items-center">
+                        <span data-purecounter-start="0" data-purecounter-end="@ViewBag.WebYayinda" data-purecounter-duration="1"
+                              class="purecounter"></span>
+                        <p class=""><strong>Yayında Olan Projelerim</strong></p>
+                    </div>
+
+                    <div class="stats-item  align-items-center">
+                        <span data-purecounter-start="0" data-purecounter-end="@ViewBag.ToplamReferans" data-purecounter-duration="1"
+                              class="purecounter"></span>
+                        <p><strong>Toplam Referanslarım</strong></p>
+                    </div>
+
+                    <div class="stats-item  align-items-center">
+                        <span data-purecounter-start="0" data-purecounter-end="@ViewBag.ToplamProje" data-purecounter-duration="1"
+                              class="purecounter"></span>
+                        <p><strong>Toplam Projelerim</strong></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- Sayaç Bitiş -->
+    <!-- ======= Projeler ======= -->
+    <section id="portfolio" class="portfolio sections-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-header">
+                <h2>Projelerim</h2>
+                <p>Masaüstü ve Web tabanlı olarak yaptığım projeler</p>
+            </div>
+
+            <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
+                 data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
+
+                <div>
+                    <ul class="portfolio-flters">
+                        <li data-filter="*" class="filter-active">Tümü</li>
+                        @foreach (var item in ViewBag.ProjeTur)
+                        {
+                            <li data-filter=".filter-@item.TurAdi">@item.TurAdi</li>
+                        }
+
+
+                    </ul>
+                </div>
+
+                <div class="row gy-4 portfolio-container">
+                    @foreach (var item in ViewBag.Projeler)
+                    {
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-@item.TurAdi">
+                            <div class="portfolio-wrap">
+                                <a href="@item.Resim1" data-gallery="portfolio-gallery-app" class="glightbox">
+                                    <img src="@item.Resim1" class="img-fluid" alt="">
+                                </a>
+                                <div class="portfolio-info">
+                                    <h4><a href="/Home/ProjeDetay?id=@item.Id" title="Daha fazlası için tıkla">@item.Ad </a></h4>
+                                    <p>@Html.Raw(item.Aciklama.Substring(0, 80))...<a href="/Home/ProjeDetay?id=@item.Id">Devamını oku</a> </p>
+                                    <br>
+                                    @if (item.VideoURL != null)
+                                    {
+                                        <div align="center">
+                                            Kullanım Videosu <br>
+                                            <a href="@item.VideoURL" class="glightbox play-btn"></a>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div align="center" style="visibility:hidden">
+                                            Kullanım Videosu <br>
+                                            <a href="@item.VideoURL" class="glightbox play-btn"></a>
+                                        </div>
+                                    }
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- Projeler Bitiş -->
+    <!-- ======= Yorumlar ======= -->@if (ViewBag.YorumSayilari > 3)
+    {
+        <section id="testimonials" class="testimonials">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>Sitemize Gelen Yorumlar</h2>
+                    <p>Sizinde yorumunuzu yayınlamamızı isterseniz bizle iletişime geçin</p>
+                </div>
+
+                <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper">
+                        @foreach (var item in ViewBag.Yorumlar)
+                        {
+                            <div class="swiper-slide">
+                                <div class="testimonial-wrap">
+                                    <div class="testimonial-item">
+                                        <div class="d-flex align-items-center">
+                                            <img src="@item.Resim" class="testimonial-img flex-shrink-0" alt="">
+                                            <div>
+                                                <h3>@item.Ad</h3>
+                                                <h4>@item.Unvan</h4>
+                                                <div class="stars">
+                                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            <i class="bi bi-quote quote-icon-left"></i>
+                                            @item.Aciklama
+                                            <i class="bi bi-quote quote-icon-right"></i>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+
+
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section><!-- Yorumlar Bitiş -->
+    }
+    @if (ViewBag.BlogSayilari > 0)
+    {
+        <!-- ======= Blog Yazıları ======= -->
+        <section id="recent-posts" class="recent-posts sections-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>Son Blog Yazılarım</h2>
+                </div>
+
+                <div class="row gy-4">
+                    @foreach (var item in ViewBag.Blog)
+                    {
+                        <div class="col-xl-4 col-md-6">
+                            <article>
+
+                                <div class="post-img">
+                                    <img src="@item.Resim" alt="" class="img-fluid">
+                                </div>
+
+                                <h2 class="title">
+                                    <a href="/Home/BlogDetay?id=@item.Id">@item.Baslik</a> <br /> <i class="bi bi-eye-fill"></i>  @item.Click
+                                </h2>
+                                <p><i class="bi bi-tag"></i> @item.Ad </p>
+
+                                <p><i class="bi bi-calendar3"></i>  @item.Tarih.ToString("dd/MM/yyyy")</p>
+
+
+                            </article>
+                        </div>
+                    }
+
+                </div>
+
+            </div>
+        </section><!-- Blog Yazıları Bitiş -->
+    }
+
+    <!-- ======= Sıkça Sorulan Sorular ======= -->
+    <section id="faq" class="faq">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-4">
+                    <div class="content px-xl-5">
+                        <h3>Sıkça Sorulan <strong>Sorular</strong></h3>
+                        <p>
+                            Merak ettiğiniz veya edebileceğiniz soruları cevaplayarak kafanızdaki soru işaretlerini ortadan
+                            kaldırdık.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+
+                    <div class="accordion accordion-flush" id="faqlist" data-aos="fade-up" data-aos-delay="100">
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-1">
+                                    <span class="num">1.</span>
+                                    Öğrenciler için ne gibi projeler yapıyorsunuz?
+                                </button>
+                            </h3>
+                            <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                <div class="accordion-body">
+                                    Öğrencilerin proje derslerinden geçebilmeleri için temel CRUD işlemlerini
+                                    (Ekleme,Okuma,Güncelleme,Silme) yapabilen projeler yapabiliyoruz.
+                                    Masaüstü için <strong>C# Windows Form</strong>, Web için <strong>ASP.NET, PHP</strong> dilleri ile
+                                    projeler hazırlıyoruz.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-2">
+                                    <span class="num">2.</span>
+                                    Herhangi bir problem yaşamamız durumunda sizle ne zaman iletişime geçebiliriz?
+                                </button>
+                            </h3>
+                            <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                <div class="accordion-body">
+                                    Hafta içi 18'den sonra, Cumartesi günü 13'den sonra, Pazar günü ise tüm gün benle iletişime
+                                    geçebilirsiniz.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-3">
+                                    <span class="num">3.</span>
+                                    Fiyatlandırma Politikanız Nedir?
+                                </button>
+                            </h3>
+                            <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                <div class="accordion-body">
+                                    Bu konunun ucu açık çünkü Web Tabanlı bir site istiyorsanız sunucu kalitesine alanına göre değişir.
+                                    Öğrenciler için bütçelerini zorlamayacak bir fiyata yapıyorum.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section><!--Sıkça Sorulan Sorular Bitiş -->
+    <!-- ======= İletişim ======= -->
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-header">
+                <h2>İletişim Bilgilerimiz</h2>
+
+            </div>
+
+            <div class="row gx-lg-0 gy-4">
+
+                <div class="col-lg-4">
+
+                    <div class="info-container d-flex flex-column align-items-center justify-content-center">
+                        <div class="info-item d-flex">
+                            <i class="bi bi-geo-alt flex-shrink-0"></i>
+                            <div>
+                                <h4>Adres:</h4>
+                                <p>@ViewBag.Iletisim.Adres</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item d-flex">
+                            <i class="bi bi-envelope flex-shrink-0"></i>
+                            <div>
+                                <h4>Mail:</h4>
+                                <p>@ViewBag.Iletisim.Mail</p>
+                            </div>
+                        </div>
+                        <div class="info-item d-flex">
+                            <i class="bi bi-phone flex-shrink-0"></i>
+                            <div>
+                                <h4>Telefon:</h4>
+                                <p>
+                                    @ViewBag.Iletisim.Tel
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-8">
+                    <form action="/Home/AddMesaj" method="post" role="form" class="msj">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="AdSoyad" class="form-control" id="AdSoyad" placeholder="Adınız" required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="email" class="form-control" name="Mail" id="Mail" placeholder="Mailiniz (Zorunlu Değil)">
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="number" class="form-control" name="Tel" id="Tel" placeholder="Telefon Numaranız (Başında 0 olmadan 10 haneli giriniz)" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" name="Konu" id="Konu" placeholder="Konu" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="Mesaj" rows="7" placeholder="Mesaj" required></textarea>
+                        </div>
+
+
+                        <div class="text-center"><button type="submit">Gönder</button></div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- İletişim bitiş -->
+</main>

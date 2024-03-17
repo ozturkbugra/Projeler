@@ -1,0 +1,161 @@
+﻿@model List<BugraSite.Models.Referanslar>
+@{
+    ViewBag.Title = "Referanslar";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container">
+    <h2>Referanslarım</h2>
+    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addReferansModal">
+        Referans Ekle
+    </button>
+    <div class="container p-5">
+        <table class="table table-striped table-hover datatable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Referans Logo</th>
+                    <th>Referans Adı</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td><img src="@item.Resim" width="100" height="100" /></td>
+                        <td>@item.Ad</td>
+
+                        <td>
+                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#updateReferansModal" onclick="editReferans('@item.Id')">Düzenle</button>
+                            <button class="btn btn-danger" onclick="deleteReferans('@item.Id')">Sil</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+   
+</div>
+
+
+<div class="modal fade" id="addReferansModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Referans Ekleme</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addReferansForm" method="post" action="@Url.Action("AddReferans")" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-group">
+                        <label for="KullaniciAdi">Referans Adı</label>
+                        <input type="text" class="form-control" id="Ad" name="Ad" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="KullaniciResim">Referans Logo (1024x768)</label>
+                        <input type="file" class="form-control" id="Resim" name="file" required />
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Çıkış</button>
+                        <button type="submit" class="btn btn-success">Kaydet</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div><!-- End Modal Dialog Scrollable-->
+
+
+<div class="modal fade" id="updateReferansModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Referans Güncelleme</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="updateReferansForm" method="post" action="@Url.Action("UpdateReferans")" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+
+                    <input type="hidden" id="Id" name="Id" />
+
+                    <div class="form-group">
+                        <label for="KullaniciAdi">Referans Adı</label>
+                        <input type="text" class="form-control" id="Ad" name="Ad" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="KullaniciResim">Referans Resim (1024x768)</label>
+                        <input type="file" class="form-control" name="file" id="Resim" />
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Çıkış</button>
+                        <button type="submit" class="btn btn-success">Güncelle</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div><!-- End Modal Dialog Scrollable-->
+
+
+<script>
+    function editReferans(id) {
+        $.ajax({
+            url: '@Url.Action("GetReferansById")',
+            type: 'GET',
+            data: { id: id },
+            success: function (result) {
+                if (result) {
+                    $('#updateReferansForm #Id').val(result.Id);
+                    $('#updateReferansForm #Ad').val(result.Ad);
+                    $('#updateReferansModal').modal('show');
+                }
+            }
+        });
+    }
+
+    function deleteReferans(id) {
+        var confirmDelete = confirm("Referansı Silmek istediğinize emin misiniz?");
+        if (confirmDelete) {
+            $.ajax({
+                url: '@Url.Action("DeleteReferans")',
+                type: 'POST',
+                data: { id: id },
+                success: function () {
+                    location.reload();
+                }
+            });
+        }
+    }
+
+    $(document).ready(function () {
+        $('#addReferansForm').submit(function (e) {
+            e.preventDefault();
+            var formData = new FormData($(this)[0]);
+
+            $.ajax({
+                url: '@Url.Action("AddReferans")',
+                type: 'POST',
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function () {
+                    location.reload();
+                }
+            });
+        });
+    });
+</script>
+
+

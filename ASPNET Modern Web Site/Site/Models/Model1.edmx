@@ -1,0 +1,875 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="bugrasiteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="100" />
+          <Property Name="Sifre" Type="nvarchar" MaxLength="100" />
+          <Property Name="AdSoyad" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Bloglar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Baslik" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Aciklama" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Resim" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Tarih" Type="date" Nullable="false" />
+          <Property Name="Kategori" Type="tinyint" />
+          <Property Name="Click" Type="int" />
+        </EntityType>
+        <EntityType Name="BlogYorumlar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BlogId" Type="int" Nullable="false" />
+          <Property Name="AdSoyad" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="200" />
+          <Property Name="Yorum" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Durum" Type="nvarchar" MaxLength="1" />
+          <Property Name="Tarih" Type="datetime" />
+          <Property Name="OkunduMu" Type="nvarchar" MaxLength="1" />
+          <Property Name="YanitVerildiMi" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="BlogYorumYanit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BlogYorumId" Type="int" />
+          <Property Name="Yorum" Type="nvarchar(max)" />
+          <Property Name="Tarih" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Hakkimda">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Yazi" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Iletisim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Adres" Type="nvarchar" MaxLength="100" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="10" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="200" />
+          <Property Name="Linkedin" Type="nvarchar" MaxLength="200" />
+          <Property Name="Instagram" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Kategoriler">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Mesajlar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdSoyad" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="200" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Konu" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Mesaj" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="OkunduMu" Type="nvarchar" MaxLength="1" />
+          <Property Name="Tarih" Type="date" />
+        </EntityType>
+        <EntityType Name="Projeler">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Aciklama" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ProjeURL" Type="nvarchar" MaxLength="100" />
+          <Property Name="Tur" Type="int" Nullable="false" />
+          <Property Name="Resim1" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Resim2" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Resim3" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Resim4" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Resim5" Type="nvarchar(max)" />
+          <Property Name="Resim6" Type="nvarchar(max)" />
+          <Property Name="VideoURL" Type="nvarchar" MaxLength="100" />
+          <Property Name="YayindaMi" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Referanslar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Resim" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tur">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TurAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VisitorLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="150" />
+          <Property Name="VisitDate" Type="date" />
+          <Property Name="Day" Type="int" />
+          <Property Name="Month" Type="int" />
+          <Property Name="Year" Type="int" />
+        </EntityType>
+        <EntityType Name="Yetenekler">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Adi" Type="nvarchar" MaxLength="100" />
+          <Property Name="Yuzdesi" Type="tinyint" />
+          <Property Name="Renk" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Yorumlar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="100" />
+          <Property Name="Resim" Type="nvarchar" MaxLength="100" />
+          <Property Name="Unvan" Type="nvarchar" MaxLength="100" />
+          <Property Name="Aciklama" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'bugrasite.dbo.BloglarView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="BloglarView">
+          <Key>
+            <PropertyRef Name="Ad" />
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Baslik" />
+            <PropertyRef Name="Aciklama" />
+            <PropertyRef Name="Resim" />
+            <PropertyRef Name="Tarih" />
+          </Key>
+          <Property Name="Ad" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Baslik" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Aciklama" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Resim" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Tarih" Type="date" Nullable="false" />
+          <Property Name="Click" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'bugrasite.dbo.BlogYorumlarView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="BlogYorumlarView">
+          <Key>
+            <PropertyRef Name="AdSoyad" />
+            <PropertyRef Name="Yorum" />
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Baslik" />
+            <PropertyRef Name="Expr1" />
+          </Key>
+          <Property Name="AdSoyad" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="200" />
+          <Property Name="Yorum" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Durum" Type="nvarchar" MaxLength="1" />
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Tarih" Type="datetime" />
+          <Property Name="Baslik" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Expr1" Type="int" Nullable="false" />
+          <Property Name="YanitVerildiMi" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'bugrasite.dbo.BlogYorumYanitView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="BlogYorumYanitView">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="BloglarId" />
+            <PropertyRef Name="BlogYorumlarId" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="BlogId" Type="int" />
+          <Property Name="BlogYorumId" Type="int" />
+          <Property Name="Yorum" Type="nvarchar(max)" />
+          <Property Name="BloglarId" Type="int" Nullable="false" />
+          <Property Name="BlogYorumlarId" Type="int" Nullable="false" />
+          <Property Name="Tarih" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'bugrasite.dbo.BlogYorumYeni' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="BlogYorumYeni">
+          <Key>
+            <PropertyRef Name="BlogID" />
+            <PropertyRef Name="BlogBaslik" />
+            <PropertyRef Name="YorumAdSoyad" />
+            <PropertyRef Name="YorumIcerik" />
+            <PropertyRef Name="YorumID" />
+            <PropertyRef Name="YanitID" />
+          </Key>
+          <Property Name="BlogID" Type="int" Nullable="false" />
+          <Property Name="BlogBaslik" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="YorumAdSoyad" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="YorumMail" Type="nvarchar" MaxLength="200" />
+          <Property Name="YorumIcerik" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="YorumDurum" Type="nvarchar" MaxLength="1" />
+          <Property Name="YorumTarih" Type="datetime" />
+          <Property Name="YorumOkunduMu" Type="nvarchar" MaxLength="1" />
+          <Property Name="YorumID" Type="int" Nullable="false" />
+          <Property Name="YanitID" Type="int" Nullable="false" />
+          <Property Name="YanitIcerik" Type="nvarchar(max)" />
+          <Property Name="YanitTarih" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'bugrasite.dbo.ProjelerView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ProjelerView">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Ad" />
+            <PropertyRef Name="Aciklama" />
+            <PropertyRef Name="Resim1" />
+            <PropertyRef Name="Resim2" />
+            <PropertyRef Name="Resim3" />
+            <PropertyRef Name="Resim4" />
+            <PropertyRef Name="TurAdi" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Aciklama" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ProjeURL" Type="nvarchar" MaxLength="100" />
+          <Property Name="Resim1" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Resim2" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Resim3" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Resim4" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Resim5" Type="nvarchar(max)" />
+          <Property Name="VideoURL" Type="nvarchar" MaxLength="100" />
+          <Property Name="TurAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Resim6" Type="nvarchar(max)" />
+          <Property Name="YayindaMi" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <EntityContainer Name="bugrasiteModelStoreContainer">
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bloglar" EntityType="Self.Bloglar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BlogYorumlar" EntityType="Self.BlogYorumlar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BlogYorumYanit" EntityType="Self.BlogYorumYanit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hakkimda" EntityType="Self.Hakkimda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Iletisim" EntityType="Self.Iletisim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kategoriler" EntityType="Self.Kategoriler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mesajlar" EntityType="Self.Mesajlar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Projeler" EntityType="Self.Projeler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Referanslar" EntityType="Self.Referanslar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tur" EntityType="Self.Tur" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VisitorLog" EntityType="Self.VisitorLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Yetenekler" EntityType="Self.Yetenekler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Yorumlar" EntityType="Self.Yorumlar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BloglarView" EntityType="Self.BloglarView" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [BloglarView].[Ad] AS [Ad], 
+    [BloglarView].[Id] AS [Id], 
+    [BloglarView].[Baslik] AS [Baslik], 
+    [BloglarView].[Aciklama] AS [Aciklama], 
+    [BloglarView].[Resim] AS [Resim], 
+    [BloglarView].[Tarih] AS [Tarih], 
+    [BloglarView].[Click] AS [Click]
+    FROM [dbo].[BloglarView] AS [BloglarView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="BlogYorumlarView" EntityType="Self.BlogYorumlarView" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [BlogYorumlarView].[AdSoyad] AS [AdSoyad], 
+    [BlogYorumlarView].[Mail] AS [Mail], 
+    [BlogYorumlarView].[Yorum] AS [Yorum], 
+    [BlogYorumlarView].[Durum] AS [Durum], 
+    [BlogYorumlarView].[Id] AS [Id], 
+    [BlogYorumlarView].[Tarih] AS [Tarih], 
+    [BlogYorumlarView].[Baslik] AS [Baslik], 
+    [BlogYorumlarView].[Expr1] AS [Expr1], 
+    [BlogYorumlarView].[YanitVerildiMi] AS [YanitVerildiMi]
+    FROM [dbo].[BlogYorumlarView] AS [BlogYorumlarView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="BlogYorumYanitView" EntityType="Self.BlogYorumYanitView" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [BlogYorumYanitView].[Id] AS [Id], 
+    [BlogYorumYanitView].[BlogId] AS [BlogId], 
+    [BlogYorumYanitView].[BlogYorumId] AS [BlogYorumId], 
+    [BlogYorumYanitView].[Yorum] AS [Yorum], 
+    [BlogYorumYanitView].[BloglarId] AS [BloglarId], 
+    [BlogYorumYanitView].[BlogYorumlarId] AS [BlogYorumlarId], 
+    [BlogYorumYanitView].[Tarih] AS [Tarih]
+    FROM [dbo].[BlogYorumYanitView] AS [BlogYorumYanitView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="BlogYorumYeni" EntityType="Self.BlogYorumYeni" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [BlogYorumYeni].[BlogID] AS [BlogID], 
+    [BlogYorumYeni].[BlogBaslik] AS [BlogBaslik], 
+    [BlogYorumYeni].[YorumAdSoyad] AS [YorumAdSoyad], 
+    [BlogYorumYeni].[YorumMail] AS [YorumMail], 
+    [BlogYorumYeni].[YorumIcerik] AS [YorumIcerik], 
+    [BlogYorumYeni].[YorumDurum] AS [YorumDurum], 
+    [BlogYorumYeni].[YorumTarih] AS [YorumTarih], 
+    [BlogYorumYeni].[YorumOkunduMu] AS [YorumOkunduMu], 
+    [BlogYorumYeni].[YorumID] AS [YorumID], 
+    [BlogYorumYeni].[YanitID] AS [YanitID], 
+    [BlogYorumYeni].[YanitIcerik] AS [YanitIcerik], 
+    [BlogYorumYeni].[YanitTarih] AS [YanitTarih]
+    FROM [dbo].[BlogYorumYeni] AS [BlogYorumYeni]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ProjelerView" EntityType="Self.ProjelerView" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ProjelerView].[Id] AS [Id], 
+    [ProjelerView].[Ad] AS [Ad], 
+    [ProjelerView].[Aciklama] AS [Aciklama], 
+    [ProjelerView].[ProjeURL] AS [ProjeURL], 
+    [ProjelerView].[Resim1] AS [Resim1], 
+    [ProjelerView].[Resim2] AS [Resim2], 
+    [ProjelerView].[Resim3] AS [Resim3], 
+    [ProjelerView].[Resim4] AS [Resim4], 
+    [ProjelerView].[Resim5] AS [Resim5], 
+    [ProjelerView].[VideoURL] AS [VideoURL], 
+    [ProjelerView].[TurAdi] AS [TurAdi], 
+    [ProjelerView].[Resim6] AS [Resim6], 
+    [ProjelerView].[YayindaMi] AS [YayindaMi]
+    FROM [dbo].[ProjelerView] AS [ProjelerView]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="bugrasiteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KullaniciAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Sifre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Bloglar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Kategori" Type="Byte" />
+          <Property Name="Click" Type="Int32" />
+        </EntityType>
+        <EntityType Name="BlogYorumlar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlogId" Type="Int32" Nullable="false" />
+          <Property Name="AdSoyad" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Yorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Durum" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Tarih" Type="DateTime" Precision="3" />
+          <Property Name="OkunduMu" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="YanitVerildiMi" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Hakkimda">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Yazi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Iletisim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Adres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Tel" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Linkedin" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Instagram" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Kategoriler">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Mesajlar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdSoyad" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Tel" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Konu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mesaj" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OkunduMu" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Tarih" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Projeler">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProjeURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Tur" Type="Int32" Nullable="false" />
+          <Property Name="Resim1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Resim2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Resim3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Resim4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Resim5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Resim6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VideoURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="YayindaMi" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Referanslar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tur">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TurAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VisitorLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IPAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="VisitDate" Type="DateTime" Precision="0" />
+          <Property Name="Day" Type="Int32" />
+          <Property Name="Month" Type="Int32" />
+          <Property Name="Year" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Yetenekler">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Adi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Yuzdesi" Type="Byte" />
+          <Property Name="Renk" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Yorumlar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Unvan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="BloglarView">
+          <Key>
+            <PropertyRef Name="Ad" />
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Baslik" />
+            <PropertyRef Name="Aciklama" />
+            <PropertyRef Name="Resim" />
+            <PropertyRef Name="Tarih" />
+          </Key>
+          <Property Name="Ad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Click" Type="Int32" />
+        </EntityType>
+        <EntityType Name="BlogYorumlarView">
+          <Key>
+            <PropertyRef Name="AdSoyad" />
+            <PropertyRef Name="Yorum" />
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Baslik" />
+            <PropertyRef Name="Expr1" />
+          </Key>
+          <Property Name="AdSoyad" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Yorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Durum" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Tarih" Type="DateTime" Precision="3" />
+          <Property Name="Baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Expr1" Type="Int32" Nullable="false" />
+          <Property Name="YanitVerildiMi" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="BlogYorumYanitView">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="BloglarId" />
+            <PropertyRef Name="BlogYorumlarId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="BlogId" Type="Int32" />
+          <Property Name="BlogYorumId" Type="Int32" />
+          <Property Name="Yorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BloglarId" Type="Int32" Nullable="false" />
+          <Property Name="BlogYorumlarId" Type="Int32" Nullable="false" />
+          <Property Name="Tarih" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ProjelerView">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Ad" />
+            <PropertyRef Name="Aciklama" />
+            <PropertyRef Name="Resim1" />
+            <PropertyRef Name="Resim2" />
+            <PropertyRef Name="Resim3" />
+            <PropertyRef Name="Resim4" />
+            <PropertyRef Name="TurAdi" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Ad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProjeURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Resim1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Resim2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Resim3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Resim4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Resim5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VideoURL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TurAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Resim6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YayindaMi" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="bugrasiteEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="Bloglars" EntityType="Self.Bloglar" />
+          <EntitySet Name="BlogYorumlars" EntityType="Self.BlogYorumlar" />
+          <EntitySet Name="Hakkimdas" EntityType="Self.Hakkimda" />
+          <EntitySet Name="Iletisims" EntityType="Self.Iletisim" />
+          <EntitySet Name="Kategorilers" EntityType="Self.Kategoriler" />
+          <EntitySet Name="Mesajlars" EntityType="Self.Mesajlar" />
+          <EntitySet Name="Projelers" EntityType="Self.Projeler" />
+          <EntitySet Name="Referanslars" EntityType="Self.Referanslar" />
+          <EntitySet Name="Turs" EntityType="Self.Tur" />
+          <EntitySet Name="VisitorLogs" EntityType="Self.VisitorLog" />
+          <EntitySet Name="Yeteneklers" EntityType="Self.Yetenekler" />
+          <EntitySet Name="Yorumlars" EntityType="Self.Yorumlar" />
+          <EntitySet Name="BloglarViews" EntityType="Self.BloglarView" />
+          <EntitySet Name="BlogYorumlarViews" EntityType="Self.BlogYorumlarView" />
+          <EntitySet Name="BlogYorumYanitViews" EntityType="Self.BlogYorumYanitView" />
+          <EntitySet Name="ProjelerViews" EntityType="Self.ProjelerView" />
+          <EntitySet Name="BlogYorumYenis" EntityType="bugrasiteModel.BlogYorumYeni" />
+          <EntitySet Name="BlogYorumYanits" EntityType="bugrasiteModel.BlogYorumYanit" />
+        </EntityContainer>
+        <EntityType Name="BlogYorumYeni">
+          <Key>
+            <PropertyRef Name="BlogID" />
+            <PropertyRef Name="BlogBaslik" />
+            <PropertyRef Name="YorumAdSoyad" />
+            <PropertyRef Name="YorumIcerik" />
+            <PropertyRef Name="YorumID" />
+            <PropertyRef Name="YanitID" />
+          </Key>
+          <Property Name="BlogID" Type="Int32" Nullable="false" />
+          <Property Name="BlogBaslik" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="YorumAdSoyad" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="YorumMail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="YorumIcerik" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YorumDurum" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="YorumTarih" Type="DateTime" Precision="3" />
+          <Property Name="YorumOkunduMu" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="YorumID" Type="Int32" Nullable="false" />
+          <Property Name="YanitID" Type="Int32" Nullable="false" />
+          <Property Name="YanitIcerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YanitTarih" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="BlogYorumYanit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlogYorumId" Type="Int32" />
+          <Property Name="Yorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Tarih" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="bugrasiteModelStoreContainer" CdmEntityContainer="bugrasiteEntities">
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="bugrasiteModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bloglars">
+            <EntityTypeMapping TypeName="bugrasiteModel.Bloglar">
+              <MappingFragment StoreEntitySet="Bloglar">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Kategori" ColumnName="Kategori" />
+                <ScalarProperty Name="Click" ColumnName="Click" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BlogYorumlars">
+            <EntityTypeMapping TypeName="bugrasiteModel.BlogYorumlar">
+              <MappingFragment StoreEntitySet="BlogYorumlar">
+                <ScalarProperty Name="YanitVerildiMi" ColumnName="YanitVerildiMi" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="BlogId" ColumnName="BlogId" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Yorum" ColumnName="Yorum" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="OkunduMu" ColumnName="OkunduMu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hakkimdas">
+            <EntityTypeMapping TypeName="bugrasiteModel.Hakkimda">
+              <MappingFragment StoreEntitySet="Hakkimda">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Yazi" ColumnName="Yazi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Iletisims">
+            <EntityTypeMapping TypeName="bugrasiteModel.Iletisim">
+              <MappingFragment StoreEntitySet="Iletisim">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Linkedin" ColumnName="Linkedin" />
+                <ScalarProperty Name="Instagram" ColumnName="Instagram" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kategorilers">
+            <EntityTypeMapping TypeName="bugrasiteModel.Kategoriler">
+              <MappingFragment StoreEntitySet="Kategoriler">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mesajlars">
+            <EntityTypeMapping TypeName="bugrasiteModel.Mesajlar">
+              <MappingFragment StoreEntitySet="Mesajlar">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Konu" ColumnName="Konu" />
+                <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+                <ScalarProperty Name="OkunduMu" ColumnName="OkunduMu" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Projelers">
+            <EntityTypeMapping TypeName="bugrasiteModel.Projeler">
+              <MappingFragment StoreEntitySet="Projeler">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="ProjeURL" ColumnName="ProjeURL" />
+                <ScalarProperty Name="Tur" ColumnName="Tur" />
+                <ScalarProperty Name="Resim1" ColumnName="Resim1" />
+                <ScalarProperty Name="Resim2" ColumnName="Resim2" />
+                <ScalarProperty Name="Resim3" ColumnName="Resim3" />
+                <ScalarProperty Name="Resim4" ColumnName="Resim4" />
+                <ScalarProperty Name="Resim5" ColumnName="Resim5" />
+                <ScalarProperty Name="Resim6" ColumnName="Resim6" />
+                <ScalarProperty Name="VideoURL" ColumnName="VideoURL" />
+                <ScalarProperty Name="YayindaMi" ColumnName="YayindaMi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Referanslars">
+            <EntityTypeMapping TypeName="bugrasiteModel.Referanslar">
+              <MappingFragment StoreEntitySet="Referanslar">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Turs">
+            <EntityTypeMapping TypeName="bugrasiteModel.Tur">
+              <MappingFragment StoreEntitySet="Tur">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TurAdi" ColumnName="TurAdi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VisitorLogs">
+            <EntityTypeMapping TypeName="bugrasiteModel.VisitorLog">
+              <MappingFragment StoreEntitySet="VisitorLog">
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Month" ColumnName="Month" />
+                <ScalarProperty Name="Day" ColumnName="Day" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Yeteneklers">
+            <EntityTypeMapping TypeName="bugrasiteModel.Yetenekler">
+              <MappingFragment StoreEntitySet="Yetenekler">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Adi" ColumnName="Adi" />
+                <ScalarProperty Name="Yuzdesi" ColumnName="Yuzdesi" />
+                <ScalarProperty Name="Renk" ColumnName="Renk" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Yorumlars">
+            <EntityTypeMapping TypeName="bugrasiteModel.Yorumlar">
+              <MappingFragment StoreEntitySet="Yorumlar">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="Unvan" ColumnName="Unvan" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BloglarViews">
+            <EntityTypeMapping TypeName="bugrasiteModel.BloglarView">
+              <MappingFragment StoreEntitySet="BloglarView">
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Click" ColumnName="Click" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BlogYorumlarViews">
+            <EntityTypeMapping TypeName="bugrasiteModel.BlogYorumlarView">
+              <MappingFragment StoreEntitySet="BlogYorumlarView">
+                <ScalarProperty Name="YanitVerildiMi" ColumnName="YanitVerildiMi" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Yorum" ColumnName="Yorum" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BlogYorumYanitViews">
+            <EntityTypeMapping TypeName="bugrasiteModel.BlogYorumYanitView">
+              <MappingFragment StoreEntitySet="BlogYorumYanitView">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="BlogId" ColumnName="BlogId" />
+                <ScalarProperty Name="BlogYorumId" ColumnName="BlogYorumId" />
+                <ScalarProperty Name="Yorum" ColumnName="Yorum" />
+                <ScalarProperty Name="BloglarId" ColumnName="BloglarId" />
+                <ScalarProperty Name="BlogYorumlarId" ColumnName="BlogYorumlarId" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProjelerViews">
+            <EntityTypeMapping TypeName="bugrasiteModel.ProjelerView">
+              <MappingFragment StoreEntitySet="ProjelerView">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="ProjeURL" ColumnName="ProjeURL" />
+                <ScalarProperty Name="Resim1" ColumnName="Resim1" />
+                <ScalarProperty Name="Resim2" ColumnName="Resim2" />
+                <ScalarProperty Name="Resim3" ColumnName="Resim3" />
+                <ScalarProperty Name="Resim4" ColumnName="Resim4" />
+                <ScalarProperty Name="Resim5" ColumnName="Resim5" />
+                <ScalarProperty Name="VideoURL" ColumnName="VideoURL" />
+                <ScalarProperty Name="TurAdi" ColumnName="TurAdi" />
+                <ScalarProperty Name="Resim6" ColumnName="Resim6" />
+                <ScalarProperty Name="YayindaMi" ColumnName="YayindaMi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BlogYorumYenis">
+            <EntityTypeMapping TypeName="bugrasiteModel.BlogYorumYeni">
+              <MappingFragment StoreEntitySet="BlogYorumYeni">
+                <ScalarProperty Name="YanitTarih" ColumnName="YanitTarih" />
+                <ScalarProperty Name="YanitIcerik" ColumnName="YanitIcerik" />
+                <ScalarProperty Name="YanitID" ColumnName="YanitID" />
+                <ScalarProperty Name="YorumID" ColumnName="YorumID" />
+                <ScalarProperty Name="YorumOkunduMu" ColumnName="YorumOkunduMu" />
+                <ScalarProperty Name="YorumTarih" ColumnName="YorumTarih" />
+                <ScalarProperty Name="YorumDurum" ColumnName="YorumDurum" />
+                <ScalarProperty Name="YorumIcerik" ColumnName="YorumIcerik" />
+                <ScalarProperty Name="YorumMail" ColumnName="YorumMail" />
+                <ScalarProperty Name="YorumAdSoyad" ColumnName="YorumAdSoyad" />
+                <ScalarProperty Name="BlogBaslik" ColumnName="BlogBaslik" />
+                <ScalarProperty Name="BlogID" ColumnName="BlogID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BlogYorumYanits">
+            <EntityTypeMapping TypeName="bugrasiteModel.BlogYorumYanit">
+              <MappingFragment StoreEntitySet="BlogYorumYanit">
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Yorum" ColumnName="Yorum" />
+                <ScalarProperty Name="BlogYorumId" ColumnName="BlogYorumId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,29 @@
+﻿@model List<BugraSite.Models.VisitorLog>
+@{
+    ViewBag.Title = "Siteye Girenler";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container p-5">
+    <table class="table table-striped table-hover datatable">
+        <thead>
+            <tr>
+                <th>IP No</th>
+                <th>Siteye Giriş Tarihi</th>
+         
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.IPAddress</td>
+                    <td>@item.VisitDate</td>
+
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

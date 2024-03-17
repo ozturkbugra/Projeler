@@ -1,0 +1,65 @@
+﻿  <!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-5 col-md-12 footer-info">
+                <a href="index.html" class="logo d-flex align-items-center">
+                    <span>BugraSoft</span>
+                </a>
+                <p>
+                    @ViewBag.Hakkimda2.Yazi
+                </p>
+                <div class="social-links d-flex mt-4">
+                    
+                    <a href="@ViewBag.Iletisim2.Instagram" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="@ViewBag.Iletisim2.Linkedin" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-6 footer-links">
+                <h4>Projelerim</h4>
+                <ul>
+                    @foreach (var item6 in ViewBag.Proje2)
+                    {
+                        <li><a href="/Home/ProjeDetay?id=@item6.Id">@item6.Ad</a></li>
+                    }
+
+                    
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-6 footer-links">
+                <h4>Yeteneklerim</h4>
+                <ul>
+                    @foreach (var item5 in ViewBag.Yetenek2)
+                    {
+                        <li><a href="/Home/Hakkimda">@item5.Adi</a></li>
+                        
+                    }
+
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                <h4>İletişim Bilgilerim</h4>
+                <p>
+                    <strong>Adres:</strong> @ViewBag.Iletisim2.Adres <br>
+                    <strong>Telefon:</strong> @ViewBag.Iletisim2.Tel <br>
+                    <strong>Mail:</strong> @ViewBag.Iletisim2.Mail<br>
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="copyright">
+            &copy; Copyright <strong><span>BugraSoft</span></strong>. Tüm hakları saklıdır.
+        </div>
+        
+    </div>
+
+</footer><!-- End Footer -->
+

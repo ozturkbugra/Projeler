@@ -1,0 +1,216 @@
+﻿@model BugraSite.Models.BloglarView
+@{
+    ViewBag.Title = Model.Baslik + "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<main id="main">
+    <!-- ======= Blog Details Section ======= -->
+    <section id="blog" class="blog">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row g-5">
+                <h5><a href="/Home">Ana Sayfa </a> / <a href="/Home/Bloglarim"> Blog Yazılarım </a> / @Model.Baslik</h5>
+                <div class="col-lg-8">
+                    @if (ViewBag.YorumTalebiAlindi != null && ViewBag.YorumTalebiAlindi)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            Yorum talebiniz alındı.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+                    <article class="blog-details">
+
+                        <div class="post-img">
+                            <img src="@Model.Resim" alt="" class="img-fluid">
+                        </div>
+
+                        <h2 class="title">@Model.Baslik</h2>
+
+                        <div class="meta-top">
+                            <ul>
+                                <li class="d-flex align-items-center"><i class="bi bi-person"></i> Buğra Öztürk</li>
+                                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> @Model.Tarih.ToString("dd/MM/yyyy")</li>
+                                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> @ViewBag.YorumSayi Yorum</li>
+                                <li class="d-flex align-items-center"> <i class="bi bi-eye-fill"></i>@Model.Click Görüntülenme</li>
+                            </ul>
+                        </div><!-- End meta top -->
+
+                        <div class="content">
+                            <p>
+                                @Html.Raw(Model.Aciklama)
+                            </p>
+
+
+
+                        </div><!-- End post content -->
+
+
+                    </article><!-- End blog post -->
+
+
+                    <div class="comments">
+
+                        <h4 class="comments-count">Yorumlar</h4>
+
+                        @if (ViewBag.Yorumsayi == 0)
+                        {
+                            <p>henüz yorum bulunamadı</p>
+                        }
+
+
+                        @foreach (var item in ViewBag.Yorumlar)
+                        {
+
+                            <div id="comment-4" class="comment">
+                                <div class="d-flex">
+                                    <div class="comment-img"><img src="~/Content/site/assets/img/pp.png" alt=""></div>
+                                    <div>
+                                        <h5><a href="">@item.YorumAdSoyad</a></h5>
+                                        <time datetime="2020-01-01">@item.YorumTarih.ToString("dd/MM/yyyy") - @item.YorumTarih.ToString("HH:mm")  </time>
+                                        <p class="yorum-text">
+                                            @item.YorumIcerik
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+                            </div><!-- End comment #4 -->
+
+                            <div id="comment-reply-4" class="comment comment-reply">
+                                <div class="d-flex">
+                                    <div class="comment-img"><img  src="~/Content/applefaviconbugra.png" alt=""></div>
+                                    <div>
+                                        <h5><a href="">BugraSoft</a></h5>
+                                        <time datetime="2020-01-01">@item.YanitTarih.ToString("dd/MM/yyyy") - @item.YanitTarih.ToString("HH:mm")</time>
+                                        <p>
+                                            @item.YanitIcerik
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        }
+
+                        @foreach (var item in ViewBag.Yorumlar5)
+                        {
+                            <div id="comment-4" class="comment">
+                                <div class="d-flex">
+                                    <div class="comment-img"><img src="~/Content/site/assets/img/pp.png" alt=""></div>
+                                    <div>
+                                        <h5><a href="">@item.AdSoyad</a></h5>
+                                        <time datetime="2020-01-01">@item.Tarih.ToString("dd/MM/yyyy") - @item.Tarih.ToString("HH:mm")  </time>
+                                        <p class="yorum-text">
+                                            @item.Yorum
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+                            </div><!-- End comment #4 -->
+                        }
+
+                        <div class="yorum-form">
+
+                            <h4>Yorum Yap</h4>
+                            <form action="/Home/AddYorum" method="post">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <input type="hidden" name="BlogID" id="BlogID" value='@Model.Id' />
+                                        <input name="AdSoyad" id="AdSoyad" type="text" class="form-control" placeholder="Adınız Soyadınız">
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input name="Mail" id="Mail" type="text" class="form-control" placeholder="Mailiniz (Zorunlu Değil)">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col form-group">
+                                        <textarea name="Yorum" id="Yorum" class="form-control" placeholder="Yorumunuz"></textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Yorum Yap</button>
+
+                            </form>
+
+                        </div>
+
+                    </div><!-- End blog comments -->
+
+                            </div>
+
+                            <div class="col-lg-4">
+
+                                <div class="sidebar">
+                                    <div class="sidebar-item search-form">
+                                        <h3 class="sidebar-title">Ara</h3>
+                                        <form action="/Home/Bloglarim" method="get" class="mt-3">
+                                            <input type="text" name="q">
+                                            <button type="submit"><i class="bi bi-search"></i></button>
+                                        </form>
+                                    </div><!-- End sidebar search formn-->
+
+
+                                    <div class="sidebar-item recent-posts">
+                                        <h3 class="sidebar-title">Son Blog Yazılarım</h3>
+
+                                        <div>
+                                            @foreach (var item in ViewBag.Bloglar)
+                                            {
+                                                <div class="post-item mt-3">
+                                                    <img src="@item.Resim" alt="">
+                                                    <div>
+                                                        <h4><a href="/Home/BlogDetay?id=@item.Id">@item.Baslik</a></h4>
+
+                                                        <time datetime="2020-01-01">@item.Tarih.ToString("dd/MM/yyyy")</time>
+                                                    </div>
+                                                </div><!-- End recent post item-->
+
+                                            }
+
+
+
+                                        </div><!-- End recent post item-->
+
+                                    </div>
+
+
+                                    <div class="sidebar-item recent-posts">
+                                        <h3 class="sidebar-title">En çok okunan blog yazılarım</h3>
+
+                                        <div>
+                                            @foreach (var item in ViewBag.BloglarTop)
+                                            {
+                                                <div class="post-item mt-3">
+                                                    <img src="@item.Resim" alt="">
+                                                    <div>
+                                                        <h4><a href="/Home/BlogDetay?id=@item.Id">@item.Baslik</a></h4>
+
+                                                        <time datetime="2020-01-01">@item.Tarih.ToString("dd/MM/yyyy")</time>
+                                                    </div>
+                                                </div><!-- End recent post item-->
+
+                                            }
+
+
+
+                                        </div><!-- End recent post item-->
+
+                                    </div>
+
+                                </div><!-- End sidebar recent posts-->
+
+
+
+                            </div><!-- End Blog Sidebar -->
+                        </div>
+
+        </div>
+    </section><!-- End Blog Details Section -->
+
+</main>

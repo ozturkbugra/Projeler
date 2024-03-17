@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bugrasiteModelStoreContainer" CdmEntityContainer="bugrasiteEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="bugrasiteModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bloglars">
+      <EntityTypeMapping TypeName="bugrasiteModel.Bloglar">
+        <MappingFragment StoreEntitySet="Bloglar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Kategori" ColumnName="Kategori" />
+          <ScalarProperty Name="Click" ColumnName="Click" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogYorumlars">
+      <EntityTypeMapping TypeName="bugrasiteModel.BlogYorumlar">
+        <MappingFragment StoreEntitySet="BlogYorumlar">
+          <ScalarProperty Name="YanitVerildiMi" ColumnName="YanitVerildiMi" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BlogId" ColumnName="BlogId" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Yorum" ColumnName="Yorum" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="OkunduMu" ColumnName="OkunduMu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hakkimdas">
+      <EntityTypeMapping TypeName="bugrasiteModel.Hakkimda">
+        <MappingFragment StoreEntitySet="Hakkimda">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Yazi" ColumnName="Yazi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Iletisims">
+      <EntityTypeMapping TypeName="bugrasiteModel.Iletisim">
+        <MappingFragment StoreEntitySet="Iletisim">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Linkedin" ColumnName="Linkedin" />
+          <ScalarProperty Name="Instagram" ColumnName="Instagram" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategorilers">
+      <EntityTypeMapping TypeName="bugrasiteModel.Kategoriler">
+        <MappingFragment StoreEntitySet="Kategoriler">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mesajlars">
+      <EntityTypeMapping TypeName="bugrasiteModel.Mesajlar">
+        <MappingFragment StoreEntitySet="Mesajlar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Konu" ColumnName="Konu" />
+          <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+          <ScalarProperty Name="OkunduMu" ColumnName="OkunduMu" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projelers">
+      <EntityTypeMapping TypeName="bugrasiteModel.Projeler">
+        <MappingFragment StoreEntitySet="Projeler">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="ProjeURL" ColumnName="ProjeURL" />
+          <ScalarProperty Name="Tur" ColumnName="Tur" />
+          <ScalarProperty Name="Resim1" ColumnName="Resim1" />
+          <ScalarProperty Name="Resim2" ColumnName="Resim2" />
+          <ScalarProperty Name="Resim3" ColumnName="Resim3" />
+          <ScalarProperty Name="Resim4" ColumnName="Resim4" />
+          <ScalarProperty Name="Resim5" ColumnName="Resim5" />
+          <ScalarProperty Name="Resim6" ColumnName="Resim6" />
+          <ScalarProperty Name="VideoURL" ColumnName="VideoURL" />
+          <ScalarProperty Name="YayindaMi" ColumnName="YayindaMi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Referanslars">
+      <EntityTypeMapping TypeName="bugrasiteModel.Referanslar">
+        <MappingFragment StoreEntitySet="Referanslar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Turs">
+      <EntityTypeMapping TypeName="bugrasiteModel.Tur">
+        <MappingFragment StoreEntitySet="Tur">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TurAdi" ColumnName="TurAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VisitorLogs">
+      <EntityTypeMapping TypeName="bugrasiteModel.VisitorLog">
+        <MappingFragment StoreEntitySet="VisitorLog">
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yeteneklers">
+      <EntityTypeMapping TypeName="bugrasiteModel.Yetenekler">
+        <MappingFragment StoreEntitySet="Yetenekler">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="Yuzdesi" ColumnName="Yuzdesi" />
+          <ScalarProperty Name="Renk" ColumnName="Renk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yorumlars">
+      <EntityTypeMapping TypeName="bugrasiteModel.Yorumlar">
+        <MappingFragment StoreEntitySet="Yorumlar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="Unvan" ColumnName="Unvan" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BloglarViews">
+      <EntityTypeMapping TypeName="bugrasiteModel.BloglarView">
+        <MappingFragment StoreEntitySet="BloglarView">
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Click" ColumnName="Click" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogYorumlarViews">
+      <EntityTypeMapping TypeName="bugrasiteModel.BlogYorumlarView">
+        <MappingFragment StoreEntitySet="BlogYorumlarView">
+          <ScalarProperty Name="YanitVerildiMi" ColumnName="YanitVerildiMi" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Yorum" ColumnName="Yorum" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogYorumYanitViews">
+      <EntityTypeMapping TypeName="bugrasiteModel.BlogYorumYanitView">
+        <MappingFragment StoreEntitySet="BlogYorumYanitView">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BlogId" ColumnName="BlogId" />
+          <ScalarProperty Name="BlogYorumId" ColumnName="BlogYorumId" />
+          <ScalarProperty Name="Yorum" ColumnName="Yorum" />
+          <ScalarProperty Name="BloglarId" ColumnName="BloglarId" />
+          <ScalarProperty Name="BlogYorumlarId" ColumnName="BlogYorumlarId" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjelerViews">
+      <EntityTypeMapping TypeName="bugrasiteModel.ProjelerView">
+        <MappingFragment StoreEntitySet="ProjelerView">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="ProjeURL" ColumnName="ProjeURL" />
+          <ScalarProperty Name="Resim1" ColumnName="Resim1" />
+          <ScalarProperty Name="Resim2" ColumnName="Resim2" />
+          <ScalarProperty Name="Resim3" ColumnName="Resim3" />
+          <ScalarProperty Name="Resim4" ColumnName="Resim4" />
+          <ScalarProperty Name="Resim5" ColumnName="Resim5" />
+          <ScalarProperty Name="VideoURL" ColumnName="VideoURL" />
+          <ScalarProperty Name="TurAdi" ColumnName="TurAdi" />
+          <ScalarProperty Name="Resim6" ColumnName="Resim6" />
+          <ScalarProperty Name="YayindaMi" ColumnName="YayindaMi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogYorumYenis">
+      <EntityTypeMapping TypeName="bugrasiteModel.BlogYorumYeni">
+        <MappingFragment StoreEntitySet="BlogYorumYeni">
+          <ScalarProperty Name="YanitTarih" ColumnName="YanitTarih" />
+          <ScalarProperty Name="YanitIcerik" ColumnName="YanitIcerik" />
+          <ScalarProperty Name="YanitID" ColumnName="YanitID" />
+          <ScalarProperty Name="YorumID" ColumnName="YorumID" />
+          <ScalarProperty Name="YorumOkunduMu" ColumnName="YorumOkunduMu" />
+          <ScalarProperty Name="YorumTarih" ColumnName="YorumTarih" />
+          <ScalarProperty Name="YorumDurum" ColumnName="YorumDurum" />
+          <ScalarProperty Name="YorumIcerik" ColumnName="YorumIcerik" />
+          <ScalarProperty Name="YorumMail" ColumnName="YorumMail" />
+          <ScalarProperty Name="YorumAdSoyad" ColumnName="YorumAdSoyad" />
+          <ScalarProperty Name="BlogBaslik" ColumnName="BlogBaslik" />
+          <ScalarProperty Name="BlogID" ColumnName="BlogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BlogYorumYanits">
+      <EntityTypeMapping TypeName="bugrasiteModel.BlogYorumYanit">
+        <MappingFragment StoreEntitySet="BlogYorumYanit">
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Yorum" ColumnName="Yorum" />
+          <ScalarProperty Name="BlogYorumId" ColumnName="BlogYorumId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

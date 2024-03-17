@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Referanslarım";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main">
+    <!-- ======= Projeler ======= -->
+    <section id="portfolio" class="portfolio sections-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-header">
+                <h2>Referanslarım</h2>
+            </div>
+
+            <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
+                 data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4 portfolio-container">
+                    @foreach (var item in ViewBag.Referans)
+                    {
+                        <div class="col-xl-4 col-md-6 portfolio-item">
+                            <div class="portfolio-wrap">
+                                <a href="@item.Resim" data-gallery="portfolio-gallery-app" class="glightbox">
+                                    <img src="@item.Resim" class="img-fluid" alt="">
+                                </a>
+                                <div class="portfolio-info">
+                                    <h4 class="text-center">@item.Ad</h4>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+                    }
+
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- Projeler Bitiş -->
+</main>
+

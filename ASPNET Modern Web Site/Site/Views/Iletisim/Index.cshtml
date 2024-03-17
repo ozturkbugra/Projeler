@@ -1,0 +1,115 @@
+﻿@model BugraSite.Models.Iletisim
+@{
+    ViewBag.Title = "İletişim";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+
+
+
+<div class="container p-5">
+    <table class="table table-hover datatable">
+        <thead>
+            <tr>
+
+                <th>Adres</th>
+                <th>Telefon</th>
+                <th>Mail</th>
+                <th>Linkedin</th>
+                <th>İnstagram</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+
+                <td>@Model.Adres</td>
+                <td>@Model.Tel</td>
+                <td>@Model.Mail</td>
+                <td>@Model.Linkedin</td>
+                <td>@Model.Instagram</td>
+
+                <td>
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable3" onclick="editKategori('@Model.Id')">Düzenle</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+
+<div class="modal fade" id="modalDialogScrollable3" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">İletişim Güncelleme</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="updateKategoriForm" method="post" action="/Iletisim/UpdateIletisim">
+                    @Html.AntiForgeryToken()
+
+                    <input type="hidden" id="Id" name="Id" />
+
+                    <div class="form-group">
+                        <label for="KullaniciAdi">Adres</label>
+                        <input type="text" class="form-control" id="Adres" name="Adres" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="KullaniciAdi">Telefon</label>
+                        <input type="number" class="form-control" id="Tel" name="Tel" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="KullaniciAdi">Mail</label>
+                        <input type="email" class="form-control" id="Mail" name="Mail" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="KullaniciAdi">Linkedin</label>
+                        <input type="text" class="form-control" id="Linkedin" name="Linkedin" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="KullaniciAdi">İnstagram</label>
+                        <input type="text" class="form-control" id="Instagram" name="Instagram" required />
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Çıkış</button>
+                        <button type="submit" class="btn btn-warning">Güncelle</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div><!-- End Modal Dialog Scrollable-->
+
+<script>
+    function editKategori(id) {
+        $.ajax({
+            url: '/Iletisim/GetIletisimById',
+            type: 'GET',
+            data: { id: id },
+            success: function (result) {
+                if (result) {
+                    $('#updateKategoriForm #Id').val(result.Id);
+                    $('#updateKategoriForm #Adres').val(result.Adres);
+                    $('#updateKategoriForm #Tel').val(result.Tel);
+                    $('#updateKategoriForm #Mail').val(result.Mail);
+                    $('#updateKategoriForm #Linkedin').val(result.Linkedin);
+                    $('#updateKategoriForm #Instagram').val(result.Instagram);
+                    $('#updateKategoriModal').modal('show');
+                }
+            }
+        });
+    }
+
+</script>

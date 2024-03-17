@@ -1,0 +1,197 @@
+﻿@model List<BugraSite.Models.Yetenekler>
+@{
+    ViewBag.Title = "Yeteneklerim";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+
+<button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable4">
+    Yetenek Ekle
+</button>
+<div class="container p-5">
+    <table class="table table-hover datatable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Yetenek Adı</th>
+                <th>Renk</th>
+                <th>Yüzdesi</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Adi</td>
+                    <td>@item.Renk</td>
+                    <td>@item.Yuzdesi</td>
+
+                    <td>
+                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#sss2" onclick="asdf('@item.Id')">Düzenle</button>
+                        <button class="btn btn-danger" onclick="deleteYetenek('@item.Id')">Sil</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+
+<div class="modal fade" id="modalDialogScrollable4" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Yetenek Ekleme</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="AddKategoriForm" method="post" action="@Url.Action("AddYetenekler")">
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-group">
+                        <label for="KullaniciAdi">Yetenek Adı</label>
+                        <input type="text" class="form-control" id="Adi" name="Adi" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="KullaniciAdi">Yüzdesi</label>
+                        <input type="number" class="form-control" id="Yuzdesi" name="Yuzdesi" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="KullaniciAdi">Renk</label>
+                        <select id="Renk" name="Renk" class="form-select">
+                            <option value="success">Yeşil</option>
+                            <option value="danger">Kırmızı</option>
+                            <option value="info">Açık Mavi</option>
+                            <option value="primary">Koyu Mavi</option>
+                            <option value="secondary">Gri</option>
+                            <option value="dark">Siyah</option>
+                            <option value="warning">Sarı</option>
+                            <option value="light">Beyaz</option>
+                        </select>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Çıkış</button>
+                        <button type="submit" class="btn btn-success">Kaydet</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div><!-- End Modal Dialog Scrollable-->
+
+
+<div class="modal fade" id="sss2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Yetenek Güncelleme</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="UpdateYetenekForm" method="post" action="@Url.Action("UpdateYetenekler")">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="Id" id="Id" />
+                    <div class="form-group">
+                        <label for="KullaniciAdi">Yetenek Adı</label>
+                        <input type="text" class="form-control" id="Adi" name="Adi" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="KullaniciAdi">Yüzdesi</label>
+                        <input type="number" class="form-control" id="Yuzdesi" name="Yuzdesi" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="KullaniciAdi">Renk</label>
+                        <select id="Renk" name="Renk" class="form-select">
+                            <option value="success">Yeşil</option>
+                            <option value="danger">Kırmızı</option>
+                            <option value="info">Açık Mavi</option>
+                            <option value="primary">Koyu Mavi</option>
+                            <option value="secondary">Gri</option>
+                            <option value="dark">Siyah</option>
+                            <option value="warning">Sarı</option>
+                            <option value="light">Beyaz</option>
+                        </select>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Çıkış</button>
+                        <button type="submit" class="btn btn-success">Güncelle</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div><!-- End Modal Dialog Scrollable-->
+
+
+<script>
+     $(document).ready(function () {
+        $('#addKategoriForm').submit(function (e) {
+            e.preventDefault();
+            var formData = new FormData($(this)[0]);
+
+            $.ajax({
+                url: '@Url.Action("AddYetenekler")',
+                type: 'POST',
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function () {
+                    location.reload();
+                }
+            });
+        });
+     });
+
+
+    function deleteYetenek(id) {
+        var confirmDelete = confirm("Silmek istediğinize emin misiniz?");
+        if (confirmDelete) {
+            $.ajax({
+                url: '@Url.Action("DeleteYetenekler")',
+                type: 'POST',
+                data: { id: id },
+                success: function () {
+                    location.reload();
+                }
+            });
+        }
+    }
+
+    function asdf(id) {
+        $.ajax({
+            url: '@Url.Action("GetYeteneklerById")',
+            type: 'GET',
+            data: { id: id },
+            success: function (result) {
+                if (result) {
+                    $('#UpdateYetenekForm #Id').val(result.Id);
+                    $('#UpdateYetenekForm #Adi').val(result.Adi);
+                    $('#UpdateYetenekForm #Yuzdesi').val(result.Yuzdesi);
+                    $('#UpdateYetenekForm #Renk').val(result.Renk);
+                    $('#sss2').modal('show');
+                }
+            }
+        });
+    }
+
+</script>
+
+
+
