@@ -1,0 +1,13 @@
+C:\Users\BUGRA\Desktop\mh2\muhasebe.exe
+C:\Users\BUGRA\Desktop\mh2\muhasebe.dll
+C:\Users\BUGRA\Desktop\mh2\muhasebe.deps.json
+C:\Users\BUGRA\Desktop\mh2\muhasebe.runtimeconfig.json
+C:\Users\BUGRA\Desktop\mh2\muhasebe.pdb
+C:\Users\BUGRA\Desktop\mh2\BouncyCastle.Crypto.dll
+C:\Users\BUGRA\Desktop\mh2\itextsharp.dll
+C:\Users\BUGRA\Desktop\mh2\System.Data.SqlClient.dll
+C:\Users\BUGRA\Desktop\mh2\runtimes\win-arm64\native\sni.dll
+C:\Users\BUGRA\Desktop\mh2\runtimes\win-x64\native\sni.dll
+C:\Users\BUGRA\Desktop\mh2\runtimes\win-x86\native\sni.dll
+C:\Users\BUGRA\Desktop\mh2\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\BUGRA\Desktop\mh2\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

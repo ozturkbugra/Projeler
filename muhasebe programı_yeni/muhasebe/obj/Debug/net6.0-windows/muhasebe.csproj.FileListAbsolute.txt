@@ -1,0 +1,82 @@
+D:\HER ŞEY\c#\muhasebe\muhasebe\bin\Debug\net6.0-windows\muhasebe.exe
+D:\HER ŞEY\c#\muhasebe\muhasebe\bin\Debug\net6.0-windows\muhasebe.deps.json
+D:\HER ŞEY\c#\muhasebe\muhasebe\bin\Debug\net6.0-windows\muhasebe.runtimeconfig.json
+D:\HER ŞEY\c#\muhasebe\muhasebe\bin\Debug\net6.0-windows\muhasebe.dll
+D:\HER ŞEY\c#\muhasebe\muhasebe\bin\Debug\net6.0-windows\muhasebe.pdb
+D:\HER ŞEY\c#\muhasebe\muhasebe\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\HER ŞEY\c#\muhasebe\muhasebe\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\HER ŞEY\c#\muhasebe\muhasebe\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\HER ŞEY\c#\muhasebe\muhasebe\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\HER ŞEY\c#\muhasebe\muhasebe\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\HER ŞEY\c#\muhasebe\muhasebe\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.csproj.AssemblyReference.cache
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.Form1.resources
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.csproj.GenerateResource.cache
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.GeneratedMSBuildEditorConfig.editorconfig
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.AssemblyInfoInputs.cache
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.AssemblyInfo.cs
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.csproj.CoreCompileInputs.cache
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.csproj.CopyComplete
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.dll
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\refint\muhasebe.dll
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.pdb
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.genruntimeconfig.cache
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\ref\muhasebe.dll
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.giris.resources
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.borclar.resources
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.gelirler.resources
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.giderler.resources
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.portföy.resources
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.tümportföyler.resources
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.sektör.resources
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.gelirgidernew.resources
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.Properties.Resources.resources
+D:\HER ŞEY\c#\muhasebe\muhasebe\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+D:\HER ŞEY\c#\muhasebe\muhasebe\bin\Debug\net6.0-windows\itextsharp.dll
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.borc2.resources
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.KASA.resources
+D:\HER ŞEY\c#\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.hesap.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\bin\Debug\net6.0-windows\muhasebe.exe
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\bin\Debug\net6.0-windows\muhasebe.deps.json
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\bin\Debug\net6.0-windows\muhasebe.runtimeconfig.json
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\bin\Debug\net6.0-windows\muhasebe.dll
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\bin\Debug\net6.0-windows\muhasebe.pdb
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.csproj.AssemblyReference.cache
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.borclar.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.Form1.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.gelirgidernew.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.gelirler.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.giderler.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.giris.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.hesap.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.KASA.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.portföy.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.Properties.Resources.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.sektör.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.tümportföyler.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.csproj.GenerateResource.cache
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.AssemblyInfoInputs.cache
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.AssemblyInfo.cs
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.csproj.CoreCompileInputs.cache
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.csproj.CopyComplete
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.dll
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\refint\muhasebe.dll
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.pdb
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.genruntimeconfig.cache
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\ref\muhasebe.dll
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.SektorTanimla.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.OdemeTuru.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.Cariler.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.GelirKisi.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.portfoykart.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.Form2.resources
+C:\Users\BUGRA\Desktop\muhasebe\muhasebe\obj\Debug\net6.0-windows\muhasebe.TumBorclar.resources

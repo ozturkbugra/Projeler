@@ -1,0 +1,11 @@
+C:\Users\BUGRA\Desktop\muhasebe programı\muhasebe.exe
+C:\Users\BUGRA\Desktop\muhasebe programı\muhasebe.dll
+C:\Users\BUGRA\Desktop\muhasebe programı\muhasebe.deps.json
+C:\Users\BUGRA\Desktop\muhasebe programı\muhasebe.runtimeconfig.json
+C:\Users\BUGRA\Desktop\muhasebe programı\muhasebe.pdb
+C:\Users\BUGRA\Desktop\muhasebe programı\System.Data.SqlClient.dll
+C:\Users\BUGRA\Desktop\muhasebe programı\runtimes\win-arm64\native\sni.dll
+C:\Users\BUGRA\Desktop\muhasebe programı\runtimes\win-x64\native\sni.dll
+C:\Users\BUGRA\Desktop\muhasebe programı\runtimes\win-x86\native\sni.dll
+C:\Users\BUGRA\Desktop\muhasebe programı\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\BUGRA\Desktop\muhasebe programı\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

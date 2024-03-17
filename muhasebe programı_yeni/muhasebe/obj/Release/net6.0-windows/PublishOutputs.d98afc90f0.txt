@@ -1,0 +1,13 @@
+D:\Muhasebe\muhasebe.exe
+D:\Muhasebe\muhasebe.dll
+D:\Muhasebe\muhasebe.deps.json
+D:\Muhasebe\muhasebe.runtimeconfig.json
+D:\Muhasebe\muhasebe.pdb
+D:\Muhasebe\BouncyCastle.Crypto.dll
+D:\Muhasebe\itextsharp.dll
+D:\Muhasebe\System.Data.SqlClient.dll
+D:\Muhasebe\runtimes\win-arm64\native\sni.dll
+D:\Muhasebe\runtimes\win-x64\native\sni.dll
+D:\Muhasebe\runtimes\win-x86\native\sni.dll
+D:\Muhasebe\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Muhasebe\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

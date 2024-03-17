@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\BUGRA\Desktop\muhasebe\muhasebe\Properties\PublishProfiles\FolderProfile3.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="borclar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Cariler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GelirKisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="hesap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="gelirgidernew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="gelirler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="giderler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="KASA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OdemeTuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="portfoykart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="portföy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SektorTanimla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="sektör.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TumBorclar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="tümportföyler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
