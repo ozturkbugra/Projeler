@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="lotusModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TblAdmin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kadi" Type="nvarchar" MaxLength="50" />
+    <Property Name="sifre" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblMenu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="yemek1" Type="smallint" />
+    <Property Name="yemek2" Type="smallint" />
+    <Property Name="yemek3" Type="smallint" />
+    <Property Name="yemek4" Type="smallint" />
+    <Property Name="tarih" Type="date" />
+  </EntityType>
+  <EntityType Name="TblMesaj">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adsoyad" Type="nvarchar(max)" />
+    <Property Name="mail" Type="nvarchar(max)" />
+    <Property Name="tel" Type="nvarchar" MaxLength="10" />
+    <Property Name="aciklama" Type="nvarchar(max)" />
+    <Property Name="durum" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="TblYemek1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad" Type="nvarchar(max)" />
+    <Property Name="resim" Type="nvarchar(max)" />
+    <Property Name="aciklama" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TblYemek2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad" Type="nvarchar(max)" />
+    <Property Name="resim" Type="nvarchar(max)" />
+    <Property Name="aciklama" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TblYemek3">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad" Type="nvarchar(max)" />
+    <Property Name="resim" Type="nvarchar(max)" />
+    <Property Name="aciklama" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TblYemek4">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad" Type="nvarchar(max)" />
+    <Property Name="resim" Type="nvarchar(max)" />
+    <Property Name="aciklama" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'lotus.dbo.MenuView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MenuView">
+    <Key>
+      <PropertyRef Name="Menü No" />
+    </Key>
+    <Property Name="Menü No" Type="int" Nullable="false" />
+    <Property Name="Yemek 1 Ad" Type="nvarchar(max)" />
+    <Property Name="Yemek 1 Resim" Type="nvarchar(max)" />
+    <Property Name="Yemek 1 Açıklama" Type="nvarchar(max)" />
+    <Property Name="Yemek 2 Ad" Type="nvarchar(max)" />
+    <Property Name="Yemek 2 Resim" Type="nvarchar(max)" />
+    <Property Name="Yemek 2 Açıklama" Type="nvarchar(max)" />
+    <Property Name="Yemek 4 Ad" Type="nvarchar(max)" />
+    <Property Name="Yemek 4 Resim" Type="nvarchar(max)" />
+    <Property Name="Yemek 4 Açıklama" Type="nvarchar(max)" />
+    <Property Name="Yemek 3 Ad" Type="nvarchar(max)" />
+    <Property Name="Yemek 3 Resim" Type="nvarchar(max)" />
+    <Property Name="Yemek 3 Açıklama" Type="nvarchar(max)" />
+    <Property Name="tarih" Type="date" />
+  </EntityType>
+  <EntityContainer Name="lotusModelStoreContainer">
+    <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMenu" EntityType="Self.TblMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMesaj" EntityType="Self.TblMesaj" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblYemek1" EntityType="Self.TblYemek1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblYemek2" EntityType="Self.TblYemek2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblYemek3" EntityType="Self.TblYemek3" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblYemek4" EntityType="Self.TblYemek4" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MenuView" EntityType="Self.MenuView" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [MenuView].[Menü No] AS [Menü No], 
+    [MenuView].[Yemek 1 Ad] AS [Yemek 1 Ad], 
+    [MenuView].[Yemek 1 Resim] AS [Yemek 1 Resim], 
+    [MenuView].[Yemek 1 Açıklama] AS [Yemek 1 Açıklama], 
+    [MenuView].[Yemek 2 Ad] AS [Yemek 2 Ad], 
+    [MenuView].[Yemek 2 Resim] AS [Yemek 2 Resim], 
+    [MenuView].[Yemek 2 Açıklama] AS [Yemek 2 Açıklama], 
+    [MenuView].[Yemek 4 Ad] AS [Yemek 4 Ad], 
+    [MenuView].[Yemek 4 Resim] AS [Yemek 4 Resim], 
+    [MenuView].[Yemek 4 Açıklama] AS [Yemek 4 Açıklama], 
+    [MenuView].[Yemek 3 Ad] AS [Yemek 3 Ad], 
+    [MenuView].[Yemek 3 Resim] AS [Yemek 3 Resim], 
+    [MenuView].[Yemek 3 Açıklama] AS [Yemek 3 Açıklama], 
+    [MenuView].[tarih] AS [tarih]
+    FROM [dbo].[MenuView] AS [MenuView]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

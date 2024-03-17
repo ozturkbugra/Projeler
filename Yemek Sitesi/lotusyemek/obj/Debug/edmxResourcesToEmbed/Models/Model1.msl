@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="lotusModelStoreContainer" CdmEntityContainer="lotusEntities">
+    <EntitySetMapping Name="TblMenus">
+      <EntityTypeMapping TypeName="lotusModel.TblMenu">
+        <MappingFragment StoreEntitySet="TblMenu">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="yemek1" ColumnName="yemek1" />
+          <ScalarProperty Name="yemek2" ColumnName="yemek2" />
+          <ScalarProperty Name="yemek3" ColumnName="yemek3" />
+          <ScalarProperty Name="yemek4" ColumnName="yemek4" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblMesajs">
+      <EntityTypeMapping TypeName="lotusModel.TblMesaj">
+        <MappingFragment StoreEntitySet="TblMesaj">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="adsoyad" ColumnName="adsoyad" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblYemek1">
+      <EntityTypeMapping TypeName="lotusModel.TblYemek1">
+        <MappingFragment StoreEntitySet="TblYemek1">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblYemek2">
+      <EntityTypeMapping TypeName="lotusModel.TblYemek2">
+        <MappingFragment StoreEntitySet="TblYemek2">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblYemek3">
+      <EntityTypeMapping TypeName="lotusModel.TblYemek3">
+        <MappingFragment StoreEntitySet="TblYemek3">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblYemek4">
+      <EntityTypeMapping TypeName="lotusModel.TblYemek4">
+        <MappingFragment StoreEntitySet="TblYemek4">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuViews">
+      <EntityTypeMapping TypeName="lotusModel.MenuView">
+        <MappingFragment StoreEntitySet="MenuView">
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="Menü_No" ColumnName="Menü No" />
+          <ScalarProperty Name="Yemek_1_Ad" ColumnName="Yemek 1 Ad" />
+          <ScalarProperty Name="Yemek_1_Resim" ColumnName="Yemek 1 Resim" />
+          <ScalarProperty Name="Yemek_1_Açıklama" ColumnName="Yemek 1 Açıklama" />
+          <ScalarProperty Name="Yemek_2_Ad" ColumnName="Yemek 2 Ad" />
+          <ScalarProperty Name="Yemek_2_Resim" ColumnName="Yemek 2 Resim" />
+          <ScalarProperty Name="Yemek_2_Açıklama" ColumnName="Yemek 2 Açıklama" />
+          <ScalarProperty Name="Yemek_4_Ad" ColumnName="Yemek 4 Ad" />
+          <ScalarProperty Name="Yemek_4_Resim" ColumnName="Yemek 4 Resim" />
+          <ScalarProperty Name="Yemek_4_Açıklama" ColumnName="Yemek 4 Açıklama" />
+          <ScalarProperty Name="Yemek_3_Ad" ColumnName="Yemek 3 Ad" />
+          <ScalarProperty Name="Yemek_3_Resim" ColumnName="Yemek 3 Resim" />
+          <ScalarProperty Name="Yemek_3_Açıklama" ColumnName="Yemek 3 Açıklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAdmins">
+      <EntityTypeMapping TypeName="lotusModel.TblAdmin">
+        <MappingFragment StoreEntitySet="TblAdmin">
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="kadi" ColumnName="kadi" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,275 @@
+﻿@model lotusyemek.Models.MenuView
+@{
+    ViewBag.Title = "Ana Sayfa";
+}
+
+<section id="hero" class="hero d-flex align-items-center section-bg">
+    <br>
+    @if (!string.IsNullOrEmpty(ViewBag.Message))
+    {
+        <div class="alert alert-success alert-dismissible fade show mt-3 text-center" role="alert">
+            @ViewBag.Message
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <div class="alert alert-danger alert-dismissible fade show mt-3 text-center" role="alert">
+            @ViewBag.ErrorMessage
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    <br />
+    <br />
+    <div class="container">
+        <div class="row justify-content-between gy-5">
+            <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+                <h2 data-aos="fade-up">
+                    LOTUS YEMEK<br>
+                    Mükemmel Lezzet<br>
+                    Mükemmel Hİzmet
+                </h2>
+                <p data-aos="fade-up" data-aos-delay="100">Her özel an, sevgi ve paylaşımı hak eder. “Lotus Yemek Catering,” bu özel anlarınıza lezzet, zarafet ve unutulmaz bir dokunuş katar.</p>
+                <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#book-a-table" class="btn-book-a-table">Bize Ulaşın</a>
+                    <!--<a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
+                </div>
+            </div>
+            <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+                <img src="~/Content/site/assets/img/hero-img.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+            </div>
+        </div>
+    </div>
+</section><!-- End Hero Section -->
+<!-- ======= Menu Section ======= -->
+<section id="menu" class="menu">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+
+            <p> <span>Günün Menüsü</span></p>
+        </div>
+
+
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="tab-pane fade active show" id="menu-starters">
+
+
+
+                <div class="row gy-5">
+
+                    <div class="col-lg-3 menu-item">
+                        <a href="@Model.Yemek_1_Resim" class="glightbox"><img src="@Model.Yemek_1_Resim" class="menu-img img-fluid" alt=""></a>
+                        <h4>@Model.Yemek_1_Ad</h4>
+                        <p class="ingredients">
+                            @Model.Yemek_1_Açıklama
+                        </p>
+                    </div><!-- Menu Item -->
+
+                    <div class="col-lg-3 menu-item">
+                        <a href="@Model.Yemek_2_Resim" class="glightbox"><img src="@Model.Yemek_2_Resim" class="menu-img img-fluid" alt=""></a>
+                        <h4>@Model.Yemek_2_Ad</h4>
+                        <p class="ingredients">
+                            @Model.Yemek_2_Açıklama
+                        </p>
+
+                    </div><!-- Menu Item -->
+
+                    <div class="col-lg-3 menu-item">
+                        <a href="@Model.Yemek_3_Resim" class="glightbox"><img src="@Model.Yemek_3_Resim" class="menu-img img-fluid" alt=""></a>
+                        <h4>@Model.Yemek_3_Ad</h4>
+                        <p class="ingredients">
+                            @Model.Yemek_3_Açıklama
+                        </p>
+
+                    </div><!-- Menu Item -->
+
+                    <div class="col-lg-3 menu-item">
+                        <a href="@Model.Yemek_4_Resim" class="glightbox"><img src="@Model.Yemek_4_Resim" class="menu-img img-fluid" alt=""></a>
+                        <h4>@Model.Yemek_4_Ad</h4>
+                        <p class="ingredients">
+                            @Model.Yemek_4_Açıklama
+                        </p>
+
+                    </div><!-- Menu Item -->
+
+
+
+                </div>
+
+
+            </div><!-- End Dinner Menu Content -->
+
+        </div>
+
+    </div>
+</section><!-- End Menu Section -->
+<!-- ======= Why Us Section ======= -->
+<section id="why-us" class="why-us section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="why-box">
+                    <h3>Neden Biz?</h3>
+                    <p>
+                        Lezzetin zirvesine ulaşmak için sadece en kaliteli bileşenleri kullanırız. İster özel bir davet, düğün, kurumsal etkinlik veya herhangi bir özel gün olsun, yemeklerimizle o günü unutulmaz kılıyoruz.
+
+                </div>
+            </div><!-- End Why Box -->
+
+            <div class="col-lg-8 d-flex align-items-center">
+                <div class="row gy-4">
+
+                    <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                            <i class="bi bi-people-fill"></i>
+                            <h4>Profesyonel Ekip</h4>
+                            <p>Profesyonel ekibimiz ile yemek çeşitliliği ve kaliteyi daha da ön plana almaktayız.</p>
+                        </div>
+                    </div><!-- End Icon Box -->
+
+                    <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                            <i class="bi bi-award-fill"></i>
+                            <h4>Hijyen ve Kalite</h4>
+                            <p>Endüstriyel ekipmanlarımız ile toplu yemek üretimini hijyen ve kalite standartlarına uygun olarak yapmaktayız.</p>
+                        </div>
+                    </div><!-- End Icon Box -->
+
+                    <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                            <i class="bi bi-truck"></i>
+                            <h4>Adrese Teslim Catering</h4>
+                            <p>Hazırlanan yemekler, yemek kutularında sıcaklığı muhafaza edilerek adresinize teslim edilir.</p>
+                        </div>
+                    </div><!-- End Icon Box -->
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End Why Us Section -->
+<!-- ======= Stats Counter Section ======= -->
+<section id="stats-counter" class="stats-counter">
+    <div class="container" data-aos="zoom-out">
+
+        <div class="row gy-4">
+
+            <div class="col-lg-4 col-md-4">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Günlük Üretim</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-4 col-md-4">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="1200" data-purecounter-duration="1" class="purecounter">%</span>
+                    <p>Haftalık Üretim</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-4 col-md-4">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="5200" data-purecounter-duration="1" class="purecounter">%</span>
+                    <p>Aylık Üretim</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+        </div><!-- End Stats Item -->
+
+    </div>
+
+
+</section><!-- End Stats Counter Section -->
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+
+            <p>İLETİŞİM BİLGİLERİMİZ</p>
+        </div>
+
+        <div class="mb-3">
+            <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1285.7064518111308!2d32.808304114909404!3d39.9650378044475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMznCsDU3JzU0LjMiTiAzMsKwNDgnMzIuNiJF!5e0!3m2!1str!2str!4v1700597893604!5m2!1str!2str" frameborder="0" allowfullscreen></iframe>
+        </div><!-- End Google Maps -->
+
+        <div class="row gy-4">
+
+            <div class="col-md-6">
+                <div class="info-item  d-flex align-items-center">
+                    <i class="icon bi bi-map flex-shrink-0"></i>
+                    <div>
+                        <h3>Adres</h3>
+                        <p>
+                            Ragıptüzün mah. Serdar sk. 135/A
+                            Yenimahalle/Ankara
+                        </p>
+                    </div>
+                </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-md-6">
+                <div class="info-item d-flex align-items-center">
+                    <i class="icon bi bi-envelope flex-shrink-0"></i>
+                    <div>
+                        <h3>Mail</h3>
+                        <p>yemek@lotusyemek.com</p>
+                    </div>
+                </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-md-6">
+                <div class="info-item  d-flex align-items-center">
+                    <a href="tel:+905454057434"> <i class="icon bi bi-telephone flex-shrink-0"></i></a>
+                    <div>
+                        <h3>Telefon</h3>
+                        <p>05454057434</p>
+                    </div>
+                </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-md-6">
+                <div class="info-item  d-flex align-items-center">
+                    <i class="icon bi bi-share flex-shrink-0"></i>
+                    <div>
+                        <h3>Açık Olduğumuz Günler</h3>
+                        <div>
+                            <strong>Pazartesi-Cumartesi arası</strong> 07:00 - 17:00
+                            <strong>Pazar:</strong> Kapalıyız
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End Info Item -->
+
+        </div>
+
+        <form action="/Home/Create" method="post" role="form" class="p-3 p-md-4" id="mesaj">
+            @Html.AntiForgeryToken()
+            <div class="row">
+                <div class="col-xl-6 form-group">
+                    <input type="text" name="adsoyad" class="form-control" id="name" placeholder="Adınız Soyadınız" required>
+                </div>
+                <div class="col-xl-6 form-group">
+                    <input type="email" class="form-control" name="mail" id="email" placeholder="Mailiniz (Zorunlu Değil)">
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" name="tel" id="subject" placeholder="Telefon Numaranız" required>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" name="aciklama" rows="5" placeholder="Mesajınız" required></textarea>
+            </div>
+            <input type="hidden" value="1" name="durum" />
+            <div class="text-center"><button type="submit">Gönder</button></div>
+        </form><!--End Contact Form -->
+
+    </div>
+</section><!-- End Contact Section -->

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="lotusModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TblMenu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="yemek1" Type="Int16" />
+    <Property Name="yemek2" Type="Int16" />
+    <Property Name="yemek3" Type="Int16" />
+    <Property Name="yemek4" Type="Int16" />
+    <Property Name="tarih" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="TblMesaj">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adsoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="tel" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="durum" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblYemek1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblYemek2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblYemek3">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblYemek4">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MenuView">
+    <Key>
+      <PropertyRef Name="Menü_No" />
+    </Key>
+    <Property Name="Menü_No" Type="Int32" Nullable="false" />
+    <Property Name="Yemek_1_Ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Yemek_1_Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Yemek_1_Açıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Yemek_2_Ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Yemek_2_Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Yemek_2_Açıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Yemek_4_Ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Yemek_4_Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Yemek_4_Açıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Yemek_3_Ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Yemek_3_Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Yemek_3_Açıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="tarih" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="lotusEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TblMenus" EntityType="Self.TblMenu" />
+    <EntitySet Name="TblMesajs" EntityType="Self.TblMesaj" />
+    <EntitySet Name="TblYemek1" EntityType="Self.TblYemek1" />
+    <EntitySet Name="TblYemek2" EntityType="Self.TblYemek2" />
+    <EntitySet Name="TblYemek3" EntityType="Self.TblYemek3" />
+    <EntitySet Name="TblYemek4" EntityType="Self.TblYemek4" />
+    <EntitySet Name="MenuViews" EntityType="Self.MenuView" />
+    <EntitySet Name="TblAdmins" EntityType="lotusModel.TblAdmin" />
+  </EntityContainer>
+  <EntityType Name="TblAdmin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

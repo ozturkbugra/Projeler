@@ -1,0 +1,50 @@
+﻿@model lotusyemek.Models.TblMesaj
+
+@{
+    ViewBag.Title = "Mesaj Detayı";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div>
+    <h4>Mesaj Detayı</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Adı Soyadı
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adsoyad)
+        </dd>
+
+        <dt>
+            Maili
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mail)
+        </dd>
+
+        <dt>
+            Telefon Numarası
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tel)
+        </dd>
+
+        <dt>
+            Mesajı
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aciklama)
+        </dd>
+
+    </dl>
+</div>
+<p class="mt-3">
+
+    @Html.ActionLink("Geri dön", "Index")
+</p>

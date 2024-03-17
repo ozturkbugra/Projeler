@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="lotusModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TblAdmin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kadi" Type="nvarchar" MaxLength="50" />
+          <Property Name="sifre" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblMenu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="yemek1" Type="smallint" />
+          <Property Name="yemek2" Type="smallint" />
+          <Property Name="yemek3" Type="smallint" />
+          <Property Name="yemek4" Type="smallint" />
+          <Property Name="tarih" Type="date" />
+        </EntityType>
+        <EntityType Name="TblMesaj">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="adsoyad" Type="nvarchar(max)" />
+          <Property Name="mail" Type="nvarchar(max)" />
+          <Property Name="tel" Type="nvarchar" MaxLength="10" />
+          <Property Name="aciklama" Type="nvarchar(max)" />
+          <Property Name="durum" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="TblYemek1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ad" Type="nvarchar(max)" />
+          <Property Name="resim" Type="nvarchar(max)" />
+          <Property Name="aciklama" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TblYemek2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ad" Type="nvarchar(max)" />
+          <Property Name="resim" Type="nvarchar(max)" />
+          <Property Name="aciklama" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TblYemek3">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ad" Type="nvarchar(max)" />
+          <Property Name="resim" Type="nvarchar(max)" />
+          <Property Name="aciklama" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TblYemek4">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ad" Type="nvarchar(max)" />
+          <Property Name="resim" Type="nvarchar(max)" />
+          <Property Name="aciklama" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'lotus.dbo.MenuView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MenuView">
+          <Key>
+            <PropertyRef Name="Menü No" />
+          </Key>
+          <Property Name="Menü No" Type="int" Nullable="false" />
+          <Property Name="Yemek 1 Ad" Type="nvarchar(max)" />
+          <Property Name="Yemek 1 Resim" Type="nvarchar(max)" />
+          <Property Name="Yemek 1 Açıklama" Type="nvarchar(max)" />
+          <Property Name="Yemek 2 Ad" Type="nvarchar(max)" />
+          <Property Name="Yemek 2 Resim" Type="nvarchar(max)" />
+          <Property Name="Yemek 2 Açıklama" Type="nvarchar(max)" />
+          <Property Name="Yemek 4 Ad" Type="nvarchar(max)" />
+          <Property Name="Yemek 4 Resim" Type="nvarchar(max)" />
+          <Property Name="Yemek 4 Açıklama" Type="nvarchar(max)" />
+          <Property Name="Yemek 3 Ad" Type="nvarchar(max)" />
+          <Property Name="Yemek 3 Resim" Type="nvarchar(max)" />
+          <Property Name="Yemek 3 Açıklama" Type="nvarchar(max)" />
+          <Property Name="tarih" Type="date" />
+        </EntityType>
+        <EntityContainer Name="lotusModelStoreContainer">
+          <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblMenu" EntityType="Self.TblMenu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblMesaj" EntityType="Self.TblMesaj" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblYemek1" EntityType="Self.TblYemek1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblYemek2" EntityType="Self.TblYemek2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblYemek3" EntityType="Self.TblYemek3" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblYemek4" EntityType="Self.TblYemek4" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MenuView" EntityType="Self.MenuView" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MenuView].[Menü No] AS [Menü No], 
+    [MenuView].[Yemek 1 Ad] AS [Yemek 1 Ad], 
+    [MenuView].[Yemek 1 Resim] AS [Yemek 1 Resim], 
+    [MenuView].[Yemek 1 Açıklama] AS [Yemek 1 Açıklama], 
+    [MenuView].[Yemek 2 Ad] AS [Yemek 2 Ad], 
+    [MenuView].[Yemek 2 Resim] AS [Yemek 2 Resim], 
+    [MenuView].[Yemek 2 Açıklama] AS [Yemek 2 Açıklama], 
+    [MenuView].[Yemek 4 Ad] AS [Yemek 4 Ad], 
+    [MenuView].[Yemek 4 Resim] AS [Yemek 4 Resim], 
+    [MenuView].[Yemek 4 Açıklama] AS [Yemek 4 Açıklama], 
+    [MenuView].[Yemek 3 Ad] AS [Yemek 3 Ad], 
+    [MenuView].[Yemek 3 Resim] AS [Yemek 3 Resim], 
+    [MenuView].[Yemek 3 Açıklama] AS [Yemek 3 Açıklama], 
+    [MenuView].[tarih] AS [tarih]
+    FROM [dbo].[MenuView] AS [MenuView]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="lotusModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TblMenu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="yemek1" Type="Int16" />
+          <Property Name="yemek2" Type="Int16" />
+          <Property Name="yemek3" Type="Int16" />
+          <Property Name="yemek4" Type="Int16" />
+          <Property Name="tarih" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="TblMesaj">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="adsoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tel" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="durum" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblYemek1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblYemek2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblYemek3">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblYemek4">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MenuView">
+          <Key>
+            <PropertyRef Name="Menü_No" />
+          </Key>
+          <Property Name="Menü_No" Type="Int32" Nullable="false" />
+          <Property Name="Yemek_1_Ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Yemek_1_Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Yemek_1_Açıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Yemek_2_Ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Yemek_2_Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Yemek_2_Açıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Yemek_4_Ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Yemek_4_Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Yemek_4_Açıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Yemek_3_Ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Yemek_3_Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Yemek_3_Açıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tarih" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="lotusEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TblMenus" EntityType="Self.TblMenu" />
+          <EntitySet Name="TblMesajs" EntityType="Self.TblMesaj" />
+          <EntitySet Name="TblYemek1" EntityType="Self.TblYemek1" />
+          <EntitySet Name="TblYemek2" EntityType="Self.TblYemek2" />
+          <EntitySet Name="TblYemek3" EntityType="Self.TblYemek3" />
+          <EntitySet Name="TblYemek4" EntityType="Self.TblYemek4" />
+          <EntitySet Name="MenuViews" EntityType="Self.MenuView" />
+          <EntitySet Name="TblAdmins" EntityType="lotusModel.TblAdmin" />
+        </EntityContainer>
+        <EntityType Name="TblAdmin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="lotusModelStoreContainer" CdmEntityContainer="lotusEntities">
+          <EntitySetMapping Name="TblMenus">
+            <EntityTypeMapping TypeName="lotusModel.TblMenu">
+              <MappingFragment StoreEntitySet="TblMenu">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="yemek1" ColumnName="yemek1" />
+                <ScalarProperty Name="yemek2" ColumnName="yemek2" />
+                <ScalarProperty Name="yemek3" ColumnName="yemek3" />
+                <ScalarProperty Name="yemek4" ColumnName="yemek4" />
+                <ScalarProperty Name="tarih" ColumnName="tarih" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblMesajs">
+            <EntityTypeMapping TypeName="lotusModel.TblMesaj">
+              <MappingFragment StoreEntitySet="TblMesaj">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="adsoyad" ColumnName="adsoyad" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+                <ScalarProperty Name="durum" ColumnName="durum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblYemek1">
+            <EntityTypeMapping TypeName="lotusModel.TblYemek1">
+              <MappingFragment StoreEntitySet="TblYemek1">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="resim" ColumnName="resim" />
+                <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblYemek2">
+            <EntityTypeMapping TypeName="lotusModel.TblYemek2">
+              <MappingFragment StoreEntitySet="TblYemek2">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="resim" ColumnName="resim" />
+                <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblYemek3">
+            <EntityTypeMapping TypeName="lotusModel.TblYemek3">
+              <MappingFragment StoreEntitySet="TblYemek3">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="resim" ColumnName="resim" />
+                <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblYemek4">
+            <EntityTypeMapping TypeName="lotusModel.TblYemek4">
+              <MappingFragment StoreEntitySet="TblYemek4">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="resim" ColumnName="resim" />
+                <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MenuViews">
+            <EntityTypeMapping TypeName="lotusModel.MenuView">
+              <MappingFragment StoreEntitySet="MenuView">
+                <ScalarProperty Name="tarih" ColumnName="tarih" />
+                <ScalarProperty Name="Menü_No" ColumnName="Menü No" />
+                <ScalarProperty Name="Yemek_1_Ad" ColumnName="Yemek 1 Ad" />
+                <ScalarProperty Name="Yemek_1_Resim" ColumnName="Yemek 1 Resim" />
+                <ScalarProperty Name="Yemek_1_Açıklama" ColumnName="Yemek 1 Açıklama" />
+                <ScalarProperty Name="Yemek_2_Ad" ColumnName="Yemek 2 Ad" />
+                <ScalarProperty Name="Yemek_2_Resim" ColumnName="Yemek 2 Resim" />
+                <ScalarProperty Name="Yemek_2_Açıklama" ColumnName="Yemek 2 Açıklama" />
+                <ScalarProperty Name="Yemek_4_Ad" ColumnName="Yemek 4 Ad" />
+                <ScalarProperty Name="Yemek_4_Resim" ColumnName="Yemek 4 Resim" />
+                <ScalarProperty Name="Yemek_4_Açıklama" ColumnName="Yemek 4 Açıklama" />
+                <ScalarProperty Name="Yemek_3_Ad" ColumnName="Yemek 3 Ad" />
+                <ScalarProperty Name="Yemek_3_Resim" ColumnName="Yemek 3 Resim" />
+                <ScalarProperty Name="Yemek_3_Açıklama" ColumnName="Yemek 3 Açıklama" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblAdmins">
+            <EntityTypeMapping TypeName="lotusModel.TblAdmin">
+              <MappingFragment StoreEntitySet="TblAdmin">
+                <ScalarProperty Name="sifre" ColumnName="sifre" />
+                <ScalarProperty Name="kadi" ColumnName="kadi" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,66 @@
+﻿@model lotusyemek.Models.MenuView
+
+@{
+    ViewBag.Title = "Menü Sil";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h3>Silmek istediğinize emin misiniz?</h3>
+<br />
+<div>
+    <h4>Menü sil</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Çorba
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yemek_1_Ad)
+        </dd>
+
+        <dt>
+            Ana Yemek
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yemek_2_Ad)
+        </dd>
+
+        <dt>
+            Yardımcı Yemek
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yemek_3_Ad)
+        </dd>
+
+        <dt>
+            Soğuk Yemek
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yemek_4_Ad)
+        </dd>
+
+        <dt>
+            Tarih
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tarih)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            @Html.ActionLink("Geri dön", "Index")
+        </div>
+    }
+</div>
