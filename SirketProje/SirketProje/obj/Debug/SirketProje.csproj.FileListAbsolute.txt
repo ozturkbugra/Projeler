@@ -1,0 +1,16 @@
+C:\Users\BUGRA\Desktop\SirketProje\SirketProje\bin\Debug\SirketProje.exe.config
+C:\Users\BUGRA\Desktop\SirketProje\SirketProje\bin\Debug\SirketProje.exe
+C:\Users\BUGRA\Desktop\SirketProje\SirketProje\bin\Debug\SirketProje.pdb
+C:\Users\BUGRA\Desktop\SirketProje\SirketProje\obj\Debug\SirketProje.csproj.AssemblyReference.cache
+C:\Users\BUGRA\Desktop\SirketProje\SirketProje\obj\Debug\SirketProje.AnaSayfa.resources
+C:\Users\BUGRA\Desktop\SirketProje\SirketProje\obj\Debug\SirketProje.Form1.resources
+C:\Users\BUGRA\Desktop\SirketProje\SirketProje\obj\Debug\SirketProje.Properties.Resources.resources
+C:\Users\BUGRA\Desktop\SirketProje\SirketProje\obj\Debug\SirketProje.csproj.GenerateResource.cache
+C:\Users\BUGRA\Desktop\SirketProje\SirketProje\obj\Debug\SirketProje.csproj.CoreCompileInputs.cache
+C:\Users\BUGRA\Desktop\SirketProje\SirketProje\obj\Debug\SirketProje.exe
+C:\Users\BUGRA\Desktop\SirketProje\SirketProje\obj\Debug\SirketProje.pdb
+C:\Users\BUGRA\Desktop\SirketProje\SirketProje\obj\Debug\SirketProje.Sirket.resources
+C:\Users\BUGRA\Desktop\SirketProje\SirketProje\obj\Debug\SirketProje.Giderler.resources
+C:\Users\BUGRA\Desktop\SirketProje\SirketProje\obj\Debug\SirketProje.Gelirler.resources
+C:\Users\BUGRA\Desktop\SirketProje\SirketProje\obj\Debug\SirketProje.Kasa.resources
+C:\Users\BUGRA\Desktop\SirketProje\SirketProje\obj\Debug\SirketProje.Calisanlar.resources
