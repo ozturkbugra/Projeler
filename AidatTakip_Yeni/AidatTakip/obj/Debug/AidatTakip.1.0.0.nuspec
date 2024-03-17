@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>AidatTakip</id>
+    <version>1.0.0</version>
+    <authors>AidatTakip</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0">
+        <dependency id="ClosedXML" version="0.102.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Office.Interop.Excel" version="15.0.4795.1001" exclude="Build,Analyzers" />
+        <dependency id="System.Data.SqlClient" version="4.8.5" exclude="Build,Analyzers" />
+        <dependency id="iTextSharp" version="5.5.13.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/net6.0-windows7.0/Google-Noto-Emoji-Travel-Places-42487-house-with-garden.ico" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="D:\HER ŞEY\c#\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.runtimeconfig.json" target="lib\net6.0-windows7.0\AidatTakip.runtimeconfig.json" />
+    <file src="D:\HER ŞEY\c#\AidatTakip\AidatTakip\bin\Debug\net6.0-windows\AidatTakip.dll" target="lib\net6.0-windows7.0\AidatTakip.dll" />
+    <file src="D:\HER ŞEY\c#\AidatTakip\AidatTakip\Google-Noto-Emoji-Travel-Places-42487-house-with-garden.ico" target="content\Google-Noto-Emoji-Travel-Places-42487-house-with-garden.ico" />
+    <file src="D:\HER ŞEY\c#\AidatTakip\AidatTakip\Google-Noto-Emoji-Travel-Places-42487-house-with-garden.ico" target="contentFiles\any\net6.0-windows7.0\Google-Noto-Emoji-Travel-Places-42487-house-with-garden.ico" />
+  </files>
+</package>
