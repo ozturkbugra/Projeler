@@ -1,0 +1,55 @@
+﻿@model cv7._0.Models.CV
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@Model.Name - CV Detayı</title>
+    <style>
+        /* İstediğiniz stillemeleri buraya ekleyebilirsiniz */
+    </style>
+</head>
+<body>
+    <h1>CV Detayı - @Model.Name</h1>
+    <div>
+        <h2>Profil Resmi</h2>
+        <img src="@Model.ProfileImagePath" alt="Profil Resmi" class="img-fluid" style="max-width: 300px;">
+    </div>
+    <div>
+        <h2>Ad Soyad</h2>
+        <p>@Model.Name</p>
+    </div>
+    <div>
+        <h2>E-posta</h2>
+        <p>@Model.Email</p>
+    </div>
+    <div>
+        <h2>Telefon Numarası</h2>
+        <p>@Model.Phone</p>
+    </div>
+    <div>
+        <h2>Cinsiyet</h2>
+        <p>@Model.Gender</p>
+    </div>
+    <div>
+        <h2>Yetenekler</h2>
+        <p>@Model.Skills</p>
+    </div>
+    <div>
+        <h2>Ehliyetler</h2>
+        <p>@Model.Licenses</p>
+    </div>
+    <div>
+        <h2>CV</h2>
+        @if (!string.IsNullOrEmpty(Model.ResumePath))
+        {
+            <a href="@Model.ResumePath" target="_blank">CV Görüntüle</a>
+        }
+        else
+        {
+            <span>CV Yok</span>
+        }
+    </div>
+</body>
+</html>

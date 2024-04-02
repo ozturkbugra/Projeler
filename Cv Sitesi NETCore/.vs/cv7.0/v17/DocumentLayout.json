@@ -1,0 +1,201 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\models\\cv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|solutionrelative:cv7.0\\models\\cv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|solutionrelative:cv7.0\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|c:\\users\\bugra\\desktop\\cv7.0\\cv7.0\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|solutionrelative:cv7.0\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\views\\home\\applicants.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|solutionrelative:cv7.0\\views\\home\\applicants.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|c:\\users\\bugra\\desktop\\cv7.0\\cv7.0\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|solutionrelative:cv7.0\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\views\\home\\applicantdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|solutionrelative:cv7.0\\views\\home\\applicantdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\models\\cvdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|solutionrelative:cv7.0\\models\\cvdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\migrations\\20240330115741_vtkuruldu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|solutionrelative:cv7.0\\migrations\\20240330115741_vtkuruldu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|solutionrelative:cv7.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|solutionrelative:cv7.0\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Migrations\\20240330115920_cvtablokuruldu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{184F82EE-D4E0-40AE-8E3B-222BCA1A0BC8}|cv7.0\\cv7.0.csproj|solutionrelative:cv7.0\\Migrations\\20240330115920_cvtablokuruldu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "cv7.0\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "cv7.0\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAA4AAABwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-02T15:57:35.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplicantDetail.cshtml",
+              "DocumentMoniker": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Views\\Home\\ApplicantDetail.cshtml",
+              "RelativeDocumentMoniker": "cv7.0\\Views\\Home\\ApplicantDetail.cshtml",
+              "ToolTip": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Views\\Home\\ApplicantDetail.cshtml",
+              "RelativeToolTip": "cv7.0\\Views\\Home\\ApplicantDetail.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC4AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-30T12:34:58.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Applicants.cshtml",
+              "DocumentMoniker": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Views\\Home\\Applicants.cshtml",
+              "RelativeDocumentMoniker": "cv7.0\\Views\\Home\\Applicants.cshtml",
+              "ToolTip": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Views\\Home\\Applicants.cshtml",
+              "RelativeToolTip": "cv7.0\\Views\\Home\\Applicants.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAAsAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-30T12:18:12.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "cv7.0\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "cv7.0\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAcwD8AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T12:00:17.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "cv7.0\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "cv7.0\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-30T12:00:05.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Program.cs",
+              "RelativeDocumentMoniker": "cv7.0\\Program.cs",
+              "ToolTip": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Program.cs",
+              "RelativeToolTip": "cv7.0\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T11:56:41.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CV.cs",
+              "DocumentMoniker": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Models\\CV.cs",
+              "RelativeDocumentMoniker": "cv7.0\\Models\\CV.cs",
+              "ToolTip": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Models\\CV.cs",
+              "RelativeToolTip": "cv7.0\\Models\\CV.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T11:45:04.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CvDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Models\\CvDBContext.cs",
+              "RelativeDocumentMoniker": "cv7.0\\Models\\CvDBContext.cs",
+              "ToolTip": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Models\\CvDBContext.cs",
+              "RelativeToolTip": "cv7.0\\Models\\CvDBContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T11:52:40.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20240330115741_vtkuruldu.cs",
+              "DocumentMoniker": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Migrations\\20240330115741_vtkuruldu.cs",
+              "RelativeDocumentMoniker": "cv7.0\\Migrations\\20240330115741_vtkuruldu.cs",
+              "ToolTip": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Migrations\\20240330115741_vtkuruldu.cs",
+              "RelativeToolTip": "cv7.0\\Migrations\\20240330115741_vtkuruldu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T11:57:41.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20240330115920_cvtablokuruldu.cs",
+              "DocumentMoniker": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Migrations\\20240330115920_cvtablokuruldu.cs",
+              "RelativeDocumentMoniker": "cv7.0\\Migrations\\20240330115920_cvtablokuruldu.cs",
+              "ToolTip": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\Migrations\\20240330115920_cvtablokuruldu.cs",
+              "RelativeToolTip": "cv7.0\\Migrations\\20240330115920_cvtablokuruldu.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T11:59:20.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\appsettings.json",
+              "RelativeDocumentMoniker": "cv7.0\\appsettings.json",
+              "ToolTip": "C:\\Users\\BUGRA\\Desktop\\cv7.0\\cv7.0\\appsettings.json",
+              "RelativeToolTip": "cv7.0\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-30T11:56:25.988Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

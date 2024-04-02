@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Formu</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="card-title text-center">CV Formu</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="/Home/Index" method="post" enctype="multipart/form-data">
+
+                            <div class="form-group">
+                                <label for="profileImage">Profil Resmi:</label>
+                                <input type="file" class="form-control" id="profileImage" name="profileImage" accept="image/*">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">Ad Soyad:</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-posta Adresi:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon Numarası:</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Cinsiyet:</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                                    <label class="form-check-label" for="male">Erkek</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                                    <label class="form-check-label" for="female">Kadın</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="skills">Yetenekler:</label>
+                                <textarea class="form-control" id="skills" name="skills" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="resume">CV Yükle (PDF):</label>
+                                <input type="file" class="form-control" id="resume" name="resume" accept=".pdf" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Hangi Tür Ehliyetiniz Var?</label><br>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="ehliyetA" name="ehliyet[]" value="Motosiklet">
+                                    <label class="form-check-label" for="ehliyetA">
+                                        A (Motosiklet)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="ehliyetB" name="ehliyet[]" value="Otomobil">
+                                    <label class="form-check-label" for="ehliyetB">
+                                        B (Otomobil)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="ehliyetC" name="ehliyet[]" value="Kamyon">
+                                    <label class="form-check-label" for="ehliyetC">
+                                        C (Kamyon)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="ehliyetD" name="ehliyet[]" value="Otobüs">
+                                    <label class="form-check-label" for="ehliyetD">
+                                        D (Otobüs)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
+                                <label class="form-check-label" for="terms">Kullanım Koşullarını Kabul Ediyorum</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Gönder</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

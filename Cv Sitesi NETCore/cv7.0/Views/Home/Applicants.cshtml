@@ -1,0 +1,43 @@
+﻿@model List<cv7._0.Models.CV>
+
+@{
+    ViewData["Title"] = "Başvuranlar";
+}
+
+<h1>Başvuranlar</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Fotoğraf</th>
+            <th>Ad Soyad</th>
+            <th>E-posta</th>
+            <th>Telefon</th>
+            <th>Cinsiyet</th>
+            <th>Yetenekler</th>
+            <th>Ehliyetler</th>
+            <th>CV</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var applicant in Model)
+        {
+                <tr>
+                    <td><img src="@applicant.ProfileImagePath" alt="Profil Resmi" class="img-fluid" style="max-width: 100px;"></td>
+                    <td>@applicant.Name</td>
+                    <td>@applicant.Email</td>
+                    <td>@applicant.Phone</td>
+                    <td>@applicant.Gender</td>
+                    <td>@applicant.Skills</td>
+                    <td>@applicant.Licenses</td>
+                    <td>
+                        <a href="@applicant.ResumePath" target="_blank">CV Görüntüle</a>
+                    </td>
+                <td>
+                    <a href="/Home/ApplicantDetail/@applicant.Id">Detay</a>
+                </td>
+                </tr>
+        }
+    </tbody>
+</table>
